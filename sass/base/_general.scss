@@ -1,0 +1,78 @@
+
+@import url(https://pro.fontawesome.com/releases/v5.11.2/css/all.css);
+
+:root {
+    --user-button-circle: rgba(0,0,0,0.025);
+    --user-button-cardborder: rgba(255,255,255,0.25);
+    --user-button-text:#323133;
+    --user-button-shadow:rgba(0,0,0,0.1);
+}
+
+body{
+    background-image: url(../ressources/No_elem_template.png);
+    background-size: cover;
+
+    overflow: hidden;
+    height: 100vh;
+    font-family: "Roboto", sans-serif;
+    transition: 0.25s;
+    background-color:black;
+}
+
+// Header Style
+header {
+    width:100%;
+    text-align: center;
+    align-items: center;
+    display: block;
+    background-image: url(../ressources/No_elem_template.png);
+    background-size: cover;
+    
+    
+.under_logo{                /*h1 + sociaux*/
+    position: relative;    
+    text-align: center;
+    align-items: center;
+    display:flex;  
+}
+.blanck{                    /*div inv*/
+    max-width: 46%;
+    flex:1;
+}
+
+header .logo{               /*header + logo*/
+    width: 100%;
+}
+.header_logo{               /*logo seul*/ 
+                         
+    text-align: center;
+    font-size: 2rem;
+    
+    
+}
+.under_logo .sociaux{       /*sociaux*/
+    display:block;
+    align-items: center;
+    text-align: center;
+    margin-right: 20px;
+    font-size: 1.5rem;
+    margin-left: auto;
+    width: fit-content;
+    height: fit-content;
+    
+       
+}
+.under_logo .sociaux a{
+    text-decoration: none;
+    padding:10px;
+    color:white;
+    
+}
+
+
+h1{ /*titre*/
+    font-size: 2.5em;
+    color:white;
+}
+    
+}
