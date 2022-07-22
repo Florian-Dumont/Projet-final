@@ -4,9 +4,9 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "normal": "sass ./sass/style.scss:./css/style.css",
-    "minify": "sass ./sass/style.scss:./css/style.css --style compressed",
-    "watch": "sass ./sass/style.scss:./css/style.css --watch"
+    "normal": "sass ./sass/style.scss:./php/page/style.css",
+    "minify": "sass ./sass/style.scss:./php/page/style.css --style compressed",
+    "watch": "sass ./sass/style.scss:./php/page/style.css --watch"
   },
   "author": "",
   "license": "ISC",
