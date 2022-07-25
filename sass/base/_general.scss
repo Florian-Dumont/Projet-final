@@ -1,28 +1,23 @@
 
-@import url(https://pro.fontawesome.com/releases/v5.11.2/css/all.css);
+@import url("https://pro.fontawesome.com/releases/v5.11.2/css/all.css");
 
 body {
-    // background-image: url(../ressources/No_elem_template.png);
+    background-image: url("../../ressources/No_elem_template.png");
     background-size: cover;
-
     overflow: hidden;
     height: 100vh;
     font-family: "Roboto", sans-serif;
     transition: 0.25s;
-    // background-color:black;
-    background-color: white;
+    
 }
 
-body, html, div, * {
-    background-color:white!important;
-}
 // Header Style
 header {
     width:100%;
     text-align: center;
     align-items: center;
     display: block;
-    background-image: url(../ressources/No_elem_template.png);
+    background-image: url("../../ressources/No_elem_template.png");
     background-size: cover;
     
     

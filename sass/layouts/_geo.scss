@@ -1,14 +1,3 @@
-body.dark {
-  background: #232223;
-  color: white;
-}
-@media (prefers-color-scheme: dark) {
-  body:not(.light) {
-    background: #232223;
-    color: white;
-  }
-}
-
  .credit {
   position: absolute;
   bottom: 20px;
@@ -68,7 +57,7 @@ body .options .option {
   overflow: hidden;
   min-width: 60px;
   margin: 10px;
-  background: var(--optionBackground, var(--defaultBackground, #E6E9ED));
+  background: var(--optionBackground);
   background-size: auto 120%;
   background-position: center;
   cursor: pointer;
@@ -164,6 +153,6 @@ body .options .option .label .info .sub {
 
 .champion1 {
   border: 2px solid red;
-  background-image: url(../../ressources/itto_face.png);
+  background-image: url("../../ressources/itto_face.png");
   background-size: cover; 
 }
