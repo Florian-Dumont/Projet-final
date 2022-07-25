@@ -2,7 +2,6 @@
 body {
   background-image: url("../../ressources/No_elem_template.png");
   background-size: cover;
-  overflow: hidden;
   height: 100vh;
   font-family: "Roboto", sans-serif;
   transition: 0.25s; }
@@ -273,7 +272,6 @@ body .options .option {
   overflow: hidden;
   min-width: 60px;
   margin: 10px;
-  background: var(--optionBackground);
   background-size: auto 120%;
   background-position: center;
   cursor: pointer;
@@ -338,11 +336,9 @@ body .options .option .label .icon {
   justify-content: center;
   align-items: center;
   min-width: 40px;
-  max-width: 40px;
-  height: 40px;
-  border-radius: 100%;
-  background-color: white;
-  color: var(--defaultBackground); }
+  max-width: 50px;
+  height: 50px;
+  border-radius: 100%; }
 
 body .options .option .label .info {
   display: flex;
@@ -367,6 +363,14 @@ body .options .option .label .info .sub {
 .champion1 {
   border: 2px solid red;
   background-image: url("../../ressources/itto_face.png");
+  background-size: cover; }
+
+.champion2 {
+  background-image: url("../../ressources/Character_Ningguang_Thumb.png");
+  background-size: cover; }
+
+.champion3 {
+  background-image: url("../../ressources/gorou_face.png");
   background-size: cover; }
 
 /*# sourceMappingURL=style.css.map */
