@@ -419,17 +419,72 @@ body .options .option .label .info .sub {
   background-repeat: no-repeat; }
 
 .champion-anemo5 {
-  background-image: url("../../ressources/itto_face.png");
+  background-image: url("../../ressources/Character_Sucrose_Thumb.png");
   background-size: cover;
   background-repeat: no-repeat; }
 
 .champion-anemo6 {
-  background-image: url("../../ressources/itto_face.png");
+  background-image: url("../../ressources/travelers-aether-and-lumine_png_1640.png");
   background-size: cover;
   background-repeat: no-repeat; }
 
 .champion-anemo7 {
-  background-image: url("../../ressources/itto_face.png");
+  background-image: url("../../ressources/Character_Venti_Thumb.png");
+  background-size: cover;
+  background-repeat: no-repeat; }
+
+.champion-anemo8 {
+  background-image: url("../../ressources/Character_Xiao_Thumb.png");
+  background-size: cover;
+  background-repeat: no-repeat; }
+
+.champion-cryo1 {
+  background-image: url("../../ressources/Character_Aloy_Thumb.png");
+  background-size: cover;
+  background-repeat: no-repeat; }
+
+.champion-cryo2 {
+  background-image: url("../../ressources/Character_Chongyun_Thumb.png");
+  background-size: cover;
+  background-repeat: no-repeat; }
+
+.champion-cryo3 {
+  background-image: url("../../ressources/Character_Diona_Thumb.png");
+  background-size: cover;
+  background-repeat: no-repeat; }
+
+.champion-cryo4 {
+  background-image: url("../../ressources/Character_Eula_Thumb.png");
+  background-size: cover;
+  background-repeat: no-repeat; }
+
+.champion-cryo5 {
+  background-image: url("../../ressources/Character_Ganyu_Thumb.png");
+  background-size: cover;
+  background-repeat: no-repeat; }
+
+.champion-cryo6 {
+  background-image: url("../../ressources/Character_Kaeya_Thumb.png");
+  background-size: cover;
+  background-repeat: no-repeat; }
+
+.champion-cryo7 {
+  background-image: url("../../ressources/Character_Kamisato_Ayaka_Thumb.png");
+  background-size: cover;
+  background-repeat: no-repeat; }
+
+.champion-cryo8 {
+  background-image: url("../../ressources/Character_Qiqi_Thumb.png");
+  background-size: cover;
+  background-repeat: no-repeat; }
+
+.champion-cryo9 {
+  background-image: url("../../ressources/Character_Rosaria_Thumb.png");
+  background-size: cover;
+  background-repeat: no-repeat; }
+
+.champion-cryo10 {
+  background-image: url("../../ressources/Character_Shenhe_Thumb.png");
   background-size: cover;
   background-repeat: no-repeat; }
 
