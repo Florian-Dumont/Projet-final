@@ -5,3 +5,5 @@ $(".option").hover(function(){
    $(this).addClass("active");
 
 });
+
+console.log("hello")
