@@ -11,6 +11,14 @@ body {
 }
 
 // Header Style
+
+.log-in{
+    color:white;
+    position:relative;
+    left:85%;
+    width:40px;
+    
+}
 header {
     width:100%;
     text-align: center;
@@ -61,33 +69,60 @@ header {
         color:white;
     }
 }
-
-/*********************************cards index *************************/
-.twitter-timeline{
-    margin-left:20px;
-    border-radius:20px;
-}
-
 .sociaux-timeline{
     display:flex;
     margin-top : 40px;
+    padding-left:30px;
 }
+/** bloc map interactive*/
 .interactive-map{
-    height: 400px;
+    height: 550px;
     width: 300px;
     background-image: url("../../ressources/genshin-impact-carte-interactive-mihoyo.png");
     background-size: cover;
-    background-position: 50% 50%;
+    background-position: 40% 50%;
     background-repeat: no-repeat;
     margin-left:20px;
     border-radius: 20px;
     .map-sign{
         position:relative;
-        left:25%;
+        left:20%;
         text-decoration:none;
         color:white;
         font-size:1.5em;
     }
 
-}    
+}
+/** block feed instagram **/
+.insta-timeline{
+    width:300px;
+    height:400px;
+    position:relative;
+    margin-left:40px;
+    margin-top:-20px;
+    
+}
+a.css-6kluu6{
+        width:0px;
+}
+
+/** block new's **/
+
+.gensh-event{
+    background-image: url("../../ressources/GenshinImpact_Multi_Jaquette_001.png");
+    background-size: cover;
+    background-position:50% 50%;
+    width:300px;
+    height:550px;
+    display:flex;
+    border-radius:20px;
+    margin-left:20px;
+ .event-sign{
+     text-decoration:none;
+     color:white;
+     position:relative;
+     left:35%;
+     font-size:1.5em;
+ }   
+}
 

@@ -1,4 +1,5 @@
 <header>
+    <div class="log-in">Connexion</div>
     <div class="logo">
         <a href="index.php">
             <img src="../../ressources/Logo1.png" alt="" class="header_logo">
