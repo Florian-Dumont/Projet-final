@@ -10,8 +10,9 @@ body {
 .log-in {
   color: white;
   position: relative;
-  left: 85%;
-  width: 40px; }
+  left: 40%;
+  width: 40px;
+  text-decoration: none; }
 
 header {
   width: 100%;
