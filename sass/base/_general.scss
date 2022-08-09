@@ -12,14 +12,7 @@ body {
 
 // Header 
 
-.log-in{
-    color:white;
-    position:relative;
-    left:40%;
-    width:40px;
-    text-decoration:none;
-    
-}
+
 header {
     width:100%;
     text-align: center;
@@ -28,7 +21,20 @@ header {
     background-image: url("../../ressources/No_elem_template.png");
     background-size: cover;
     
-    
+    .log-in{                 /* bouton connexion + logo deco */
+    color:white;
+    position:relative;
+    left:40%;
+    width:40px;
+    text-decoration:none;
+    }
+    .log-out{
+        text-decoration:none;
+        color:white;
+        position:relative;
+        left:41%;
+        
+    }
     .under_logo{                /*h1 + sociaux*/
         position: relative;    
         text-align: center;
@@ -127,3 +133,36 @@ a.css-6kluu6{
  }   
 }
 
+/****** FORM**********/
+
+form {
+  margin: 0 auto;
+  width: 450px;
+  height:280px;
+  padding: 1em;
+  border: 1px solid #CCC;
+  border-radius: 1em;
+  text-align : end;
+  label + input{
+      margin:20px;
+  }
+  label{
+      color:white;
+  }
+  input{
+      
+  }
+  button{
+      position:relative;
+      right:37%;
+      margin-bottom:20px;
+      border-radius:10px;
+      width:100px;
+  }
+  .form_name{
+      position:relative;
+      right:38%;
+      margin:10px 0 10px 0;
+      font-size:1.2em;
+  }
+}
