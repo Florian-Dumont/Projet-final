@@ -25,7 +25,7 @@
     </a>
         </div>
         <div class="nav_geo">
-            <a href="Geo.phtml"><!--link page perso-->
+            <a href="index.php?route=geo"><!--link page perso-->
             <div class="nav_icone_geo">
                 <img src="../../ressources/geo.png" alt="">
             </div>
@@ -41,7 +41,7 @@
         </a>
         </div>
         <div class="nav_pyro">
-            <a href="Pyro.phtml"><!--link page perso-->
+            <a href="?route=pyro"><!--link page perso-->
             <div class="nav_icone">
                 <img src="../../ressources/Pyro.png" alt="">
             </div>

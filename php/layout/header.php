@@ -1,6 +1,8 @@
 <header>
-    <a class="log-in" href="signUp.phtml">Connexion</a>
-    <a class="log-out" href="#"><i class="fa-solid fa-arrow-right-from-bracket"></i></a>
+    <div class="logs">
+        <a class="log-in" href="authentication.phtml">Connexion</a>
+        <a class="log-out" href="#"><i class="fa-solid fa-arrow-right-from-bracket"></i></a>
+    </div>
     <div class="logo">
         <a href="index.php">
             <img src="../../ressources/Logo1.png" alt="" class="header_logo">
