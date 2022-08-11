@@ -16,7 +16,23 @@ class AuthenticationController
     }
     function pyro() : void
     {
-            require '../page/Pyro.phtml';
+        require '../page/Pyro.phtml';
+    }
+    function anemo() : void
+    {
+        require '../page/Anemo.phtml';
+    }
+    function cryo() : void
+    {
+        require '../page/Cryo.phtml';
+    }
+    function electro() : void
+    {
+        require '../page/Electro.phtml';
+    }
+    function hydro() : void
+    {
+        require '../page/Hydro.phtml';
     }
 
     

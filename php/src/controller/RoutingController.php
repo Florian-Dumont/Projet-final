@@ -14,6 +14,7 @@ class RoutingController
     
     private function sortRoute(string $route, array $get, array $post = null) : void
     {
+        
            
         if($route === "homepage")
         {
@@ -29,7 +30,27 @@ class RoutingController
         {
                 $authenticationController = new AuthenticationController();
                 $authenticationController->pyro($post);
-        }        
+        }
+        else if($route === "anemo")
+        {
+            $authenticationController = new AuthenticationController();
+            $authenticationController->anemo($post);
+        }
+        else if($route === "cryo")
+        {
+            $authenticationController = new AuthenticationController();
+            $authenticationController->cryo($post);
+        }
+        else if($route === "electro")
+        {
+            $authenticationController = new AuthenticationController();
+            $authenticationController->electro($post);
+        }
+        else if($route === "hydro")
+        {
+            $authenticationController = new AuthenticationController();
+            $authenticationController->hydro($post);
+        }
         // création des page pyro ect
         else
         {
@@ -40,7 +61,6 @@ class RoutingController
     public function matchRoute(string $route = "homepage", array $get, array $post = null) : void
     {
         $existingRoutes = $this->pageManager->getAllPagesSlugs();
-        
         
         $found = false;
         

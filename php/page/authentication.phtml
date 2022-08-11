@@ -1,7 +1,7 @@
 <?php   include "../layout/metadata.php";
         include "../layout/header.php";
         include "../page/form.php";
-        include "../page/connexion.php";
+       
         
         
         // a enelever une fosi le routing fait
@@ -12,7 +12,7 @@
         //on traite le formulaire
         if(!empty($_POST)){
             // var_dump($_POST);
-            //POST n'est pa s vide , on verifie que tte les données sont présentes
+            //POST n'est pas vide , on verifie que tte les données sont présentes
             if(
                 isset($_POST["name"], $_POST["email"], $_POST["password"]) && !empty($_POST["name"]) && !empty($_POST["email"]) && !empty($_POST["password"])
             ){
@@ -57,18 +57,19 @@
                         }else
                         {
                             
-                            var_dump($password);
+                            
                             $sql ="SELECT * FROM users WHERE email = :email AND password = :password";
                         
                         $query = $ddb->db->prepare($sql);
                         $query->bindValue(":email", $_POST["emailconnexion"]);
-                        $query->bindValue(":password", $password);
+                        $query->bindValue(":password", $_POST["passwordconnexion"]);
                         $query->execute();
                         
                         $user = $query->fetch();
                         
+                        var_dump($user);
                         if(!$user){
-                            die("L'utilisateur et/ou le mot de passe est incorrect");
+                            die("L'utilisateur et/ou le mot de passe est incorrect 2 ");
                         }
                         // confirmation de l'existance du user, on peut verif sont MDP
                         if(!password_verify($_POST["passwordconnexion"], $user["password"])){
@@ -78,19 +79,25 @@
                         //on démarre la session PHP via session_start
                         session_start();
                         
+                        //on stock dans $_SESSIONS les info de l'utilisateur
+                        $_SESSION["user"] = [
+                            "id" => $user["id"],
+                            "pseudo" => $user["name"],
+                            "email" => $user["email"],
+                            "is_admin" => $user["is_admin"]
+                        ];
                         
+                        // on redirige vers la page d'acueille
+                        
+                        header("location: index.php");
+                        
+                            
                         var_dump($user);
                             
                         }
-                        
-                        
-                        
                 }
-                
         }
-
-            
-            else{
+        else{
                 die("Le formulaire est incomplet");
             }
 
