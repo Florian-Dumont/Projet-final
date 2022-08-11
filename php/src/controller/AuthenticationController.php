@@ -34,6 +34,10 @@ class AuthenticationController
     {
         require '../page/Hydro.phtml';
     }
+    function connexion() : void
+    {
+        require '../page/form.php';
+    }
 
     
 }

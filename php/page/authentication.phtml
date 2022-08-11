@@ -58,11 +58,10 @@
                         {
                             
                             
-                            $sql ="SELECT * FROM users WHERE email = :email AND password = :password";
+                            $sql ="SELECT * FROM users WHERE email = :email";
                         
                         $query = $ddb->db->prepare($sql);
                         $query->bindValue(":email", $_POST["emailconnexion"]);
-                        $query->bindValue(":password", $_POST["passwordconnexion"]);
                         $query->execute();
                         
                         $user = $query->fetch();
@@ -81,7 +80,7 @@
                         
                         //on stock dans $_SESSIONS les info de l'utilisateur
                         $_SESSION["user"] = [
-                            "id" => $user["id"],
+                            "id" => $user["ID"],
                             "pseudo" => $user["name"],
                             "email" => $user["email"],
                             "is_admin" => $user["is_admin"]

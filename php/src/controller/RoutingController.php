@@ -51,6 +51,11 @@ class RoutingController
             $authenticationController = new AuthenticationController();
             $authenticationController->hydro($post);
         }
+        else if($route === "connexion")
+        {
+            $authenticationController = new AuthenticationController();
+            $authenticationController->connexion($post);
+        }
         // création des page pyro ect
         else
         {
