@@ -6,7 +6,9 @@ class AuthenticationController
     // function homepage() : void qui devra faire afficher le template homepage.phtml
     function homepage() : void
     {
-        require '../page/homepage.phtml'; 
+        
+        require '../page/homepage.phtml';
+        
     }
     
     // function geo() : void qui devra faire afficher le template geo.phtml
@@ -36,6 +38,7 @@ class AuthenticationController
     }
     function connexion() : void
     {
+        // require '../page/authentication.phtml';
         require '../page/form.php';
     }
 

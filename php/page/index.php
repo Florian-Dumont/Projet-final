@@ -1,12 +1,23 @@
 <!DOCTYPE html>
 <html lang="fr">
+<?php session_start();?>
 <?php require "../classes/db_connect.php"?>
-
+<?php 
+    if(!empty($_POST)){
+        
+         require "../page/authentication.phtml"; 
+    }
+?>
 <?php include "../layout/metadata.php" ?>
 <?php $ddb = new Dbconnect(); ?>
     <body>
+        
         <?php include "../layout/header.php" ?>
-        <?php include "../layout/navigation.php" ?>
+        <?php 
+if(!(isset($_GET["route"]) && $_GET["route"] === "connexion")){
+    include "../layout/navigation.php" ;
+}
+?>
         
         
         <?php
@@ -27,6 +38,7 @@
     }
     
 ?>
+
         
         
     </body>

@@ -1,13 +1,14 @@
 <?php   include "../layout/metadata.php";
-        include "../layout/header.php";
-        include "../page/form.php";
+        // include "../layout/header.php";
+        // include "../page/form.php";
        
         
         
         // a enelever une fosi le routing fait
-        require "../classes/db_connect.php";
+        // require "../classes/db_connect.php";
         $ddb = new Dbconnect();
         
+                            
 
         //on traite le formulaire
         if(!empty($_POST)){
@@ -57,7 +58,6 @@
                         }else
                         {
                             
-                            
                             $sql ="SELECT * FROM users WHERE email = :email";
                         
                         $query = $ddb->db->prepare($sql);
@@ -66,7 +66,7 @@
                         
                         $user = $query->fetch();
                         
-                        var_dump($user);
+                        
                         if(!$user){
                             die("L'utilisateur et/ou le mot de passe est incorrect 2 ");
                         }
@@ -76,7 +76,8 @@
                         }
                         //si l'utilisateur et le mdp sont corrects on va pouvoir connecté l'utilisateur
                         //on démarre la session PHP via session_start
-                        session_start();
+                        // session_start();
+                        
                         
                         //on stock dans $_SESSIONS les info de l'utilisateur
                         $_SESSION["user"] = [
@@ -86,12 +87,13 @@
                             "is_admin" => $user["is_admin"]
                         ];
                         
+                        
                         // on redirige vers la page d'acueille
                         
-                        header("location: index.php");
+                        
                         
                             
-                        var_dump($user);
+                        
                             
                         }
                 }

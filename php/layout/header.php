@@ -1,5 +1,5 @@
 <?php
-session_start();
+// session_start();
 ?>
 <header>
     <div class="logs">
@@ -8,20 +8,19 @@ session_start();
             
             
             
-            var_dump($_SESSION);
+            
             if(isset($_SESSION['user']))
             {
-                return $_SESSION['user']['pseudo'];
+                echo $_SESSION['user']['pseudo'];
+                
             }else{
-                echo "t'es pas co";
+                echo "Connexion";
             }
             
             
             ?>
         </a>
-        <a class="log-out" href="#"><i class="fa-solid fa-arrow-right-from-bracket">
-            
-        </i></a>
+        <a class="log-out" href="#"><i class="fa-solid fa-arrow-right-from-bracket"></i></a>
     </div>
     <div class="logo">
         <a href="index.php">

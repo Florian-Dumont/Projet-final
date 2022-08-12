@@ -1,3 +1,5 @@
+
+
 <!-- FORMULAIRE D'INSCRIPTION  -->
 
 <form class="log-form" action="" method="post">
@@ -20,7 +22,7 @@
         
         <!-- FORMULAIRE DE CONNEXION -->
         
-<form class="login-form" action="" method="post">
+<form class="login-form" action="index.php" method="post">
             <label class="form_name" for="text" id="text" name="form_name" >Connexion</label>
           <div>
             <label for="mail">E-mail&nbsp;:</label>
