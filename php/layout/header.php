@@ -20,7 +20,19 @@
             
             ?>
         </a>
-        <a class="log-out" href="#"><i class="fa-solid fa-arrow-right-from-bracket"></i></a>
+        <a class="log-out" href="index.php"><i class="fa-solid fa-arrow-right-from-bracket">
+            
+            <?php
+ 
+// Déconnexion de l'utilisateur
+$_SESSION = array();
+session_unset();
+session_destroy();
+
+ 
+?>
+            
+        </i></a>
     </div>
     <div class="logo">
         <a href="index.php">
