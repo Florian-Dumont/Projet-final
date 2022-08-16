@@ -41,6 +41,10 @@ class AuthenticationController
         // require '../page/authentication.phtml';
         require '../page/form.php';
     }
+    function build() : void
+    {
+        require '../page/Build.phtml';
+    }
 
     
 }

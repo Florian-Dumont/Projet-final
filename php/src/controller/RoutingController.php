@@ -56,6 +56,11 @@ class RoutingController
             $authenticationController = new AuthenticationController();
             $authenticationController->connexion($post);
         }
+        else if ($route === "build")
+        {
+            $authenticationController = new AuthenticationController();
+            $authenticationController->build($post);
+        }
         // création des page pyro ect
         else
         {

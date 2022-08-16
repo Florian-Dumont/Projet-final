@@ -2,14 +2,18 @@
 <html lang="fr">
 <?php include "../layout/metadata.php" ?>
     <body>
-   <?php include "../layout/header.php" ?>
-   <?php include "../layout/navigation.php" ?>
    <div class="build_disclaimer">
            <p>Ceci n'est qu'une proposition de build, d'autres variantes existes </p>
    </div>
    
-       <div class="build_layout"></div> 
+       <div class="build_layout">
+               
+         <?php
+         include "../managers/Buildmanager.php"
+         ?>      
+               
+       </div> 
   
 </body>
-<?php include "../layout/script.php" ?>
 </html>
+
