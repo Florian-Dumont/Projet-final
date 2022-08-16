@@ -1,0 +1,37 @@
+
+
+<?php
+
+require "../uploads/FileUploader.php";
+
+if(isset($_POST["submit"]))
+{
+    if(isset($_FILES["fileToUpload"]))
+    {
+        $uploader = new FileUploader();
+        
+        $media = $uploader->upload($_FILES["fileToUpload"]);
+        
+        echo "<pre>";
+        print_r($media);
+        echo "</pre>";
+    }
+}
+
+?>
+
+<!doctype html>
+<html>
+    <head>
+        
+    </head>
+    <body>
+        <h3>crée un perso</h3>
+        <form action="index.php" method="post" enctype="multipart/form-data">
+            Select image to upload:
+              <input type="file" name="fileToUpload" id="fileToUpload">
+              <input type="submit" value="Upload Image" name="submit">
+        </form>
+    </body>
+</html>                                
+        

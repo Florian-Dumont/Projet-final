@@ -21,19 +21,28 @@
             ?>
         </a>
         
-        <a class="log-out" href="index.php"><i class="fa-solid fa-arrow-right-from-bracket">
+        <a class="log-out" href="deconnexion.php"><i class="fa-solid fa-arrow-right-from-bracket">
             
             <?php
  
                 // Déconnexion de l'utilisateur
-                $_SESSION = array();
-                session_unset();
-                session_destroy();
+                // $_SESSION = array();
+                // session_unset();
+                
                 
                  
             ?>
             
         </i></a>
+        <?php
+        var_dump($_SESSION);
+        if(isset($_SESSION['user']) && ($_SESSION['user']['is_admin'] == 1 ))
+        {
+            echo "<a class='admin-panel' href=admin.phtml>admin</a>";    
+        }else{
+            
+        }
+        ?>
         
         
     </div>

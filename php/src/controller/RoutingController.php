@@ -61,7 +61,7 @@ class RoutingController
             $authenticationController = new AuthenticationController();
             $authenticationController->build($post);
         }
-        // création des page pyro ect
+        
         else
         {
             echo "<h1>404 page not found</h1>";

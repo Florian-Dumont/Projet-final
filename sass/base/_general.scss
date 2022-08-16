@@ -21,6 +21,10 @@ header {
     display: block;
     background-image: url("../../ressources/No_elem_template.png");
     background-size: cover;
+    .admin-panel{
+        background-color: red;
+        color:white;
+    }
     
     .log-in{                 /* bouton connexion + logo deco */
     color:white;
