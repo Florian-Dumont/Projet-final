@@ -61,10 +61,16 @@ class RoutingController
             $authenticationController = new AuthenticationController();
             $authenticationController->build($post);
         }
+        else if ($route === "admin")
+        {
+            $authenticationController = new AuthenticationController();
+            $authenticationController->admin($post);
+        }
         
         else
         {
-            echo "<h1>404 page not found</h1>";
+            echo "<h1 class='notfound'>Loupé , la page n'existe pas !</br> 
+            <img src='../../ressources/Ganyu404.png' alt=' émoticone de ganyu troublé'></h1>";
         }
     }
     

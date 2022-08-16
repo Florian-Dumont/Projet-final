@@ -45,6 +45,16 @@ class AuthenticationController
     {
         require '../page/Build.phtml';
     }
+    function admin() : void
+    {
+        if($_SESSION['user']['is_admin']==1){ 
+        require "../admin.phtml";
+        } 
+        else{
+        echo "<h1 class='notfound'>Loupé , la page n'existe pas !</br> 
+            <img src='../../ressources/Ganyu404.png' alt=' émoticone de ganyu troublé'></h1>";
+        }
+    }    
 
     
 }

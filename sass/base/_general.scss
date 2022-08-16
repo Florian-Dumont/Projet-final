@@ -22,7 +22,8 @@ header {
     background-image: url("../../ressources/No_elem_template.png");
     background-size: cover;
     .admin-panel{
-        background-color: red;
+        position:relative;
+        left:42%;
         color:white;
     }
     
@@ -183,4 +184,13 @@ a.css-6kluu6{
       margin:10px 0 10px 0;
       font-size:1.2em;
   }
+}
+
+//************PAGE 404 ******************//
+
+.notfound{
+    display:block;
+    text-align:center;
+    color:white;
+    
 }
