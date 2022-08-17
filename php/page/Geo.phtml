@@ -1,27 +1,82 @@
 <!DOCTYPE html>
 <html lang="fr">
 <?php include "../layout/metadata.php" ?>
+<?php require "../src/managers/CharacterManagers.php";
+$cm = new CharacterManagers();
+$characters = $cm->getCharactersByCategoryId(6);
+
+?>
     <body>
         
    <div class="options-wrapper">
    <div class="options">
-      <a href="?route=build&characterId=1"class="option active champion-geo1">
+      
+      <?php
+      
+      for($i=0, $max=count($characters); $i < $max; $i++){
+         ?>
+         
+         <a href="?route=build&characterId=<?=$characters[$i]['ID']?>"class="option active champion-geo1">
          <div class="" >
             <div class="shadow"></div>
             <div class="label">
                <div class="icon">
-                  <img class="icon" src="../../ressources/espadon.png">
+                  <img class="icon" src=<?=$characters[$i]['weapon_icon']?>>
                </div>
                <div class="info">
                   <div class="main">
-                     <p>Itto</p>
+                     <p><?=$characters[$i]['name']?></p>
                   </div>
                   <div class="sub">
-                     <p>Epée à deux mains</p></div>
+                     <p><?=$characters[$i]['weapon_name']?></p></div>
                </div>
             </div>
          </div>
-      </a>   
+      </a>
+      
+         <?php
+      }
+      
+      
+      ?>
+      <a href="?route=build&characterId=<?=$characters[0]['ID']?>"class="option active champion-geo1">
+         <div class="" >
+            <div class="shadow"></div>
+            <div class="label">
+               <div class="icon">
+                  <img class="icon" src=<?=$characters[0]['weapon_icon']?>>
+               </div>
+               <div class="info">
+                  <div class="main">
+                     <p><?=$characters[0]['name']?></p>
+                  </div>
+                  <div class="sub">
+                     <p><?=$characters[0]['weapon_name']?></p></div>
+               </div>
+            </div>
+         </div>
+      </a>
+      
+      <a href="?route=build&characterId=<?=$characters[1]['ID']?>"class="option active champion-geo1">
+         <div class="" >
+            <div class="shadow"></div>
+            <div class="label">
+               <div class="icon">
+                  <img class="icon" src=<?=$characters[1]['weapon_icon']?>>
+               </div>
+               <div class="info">
+                  <div class="main">
+                     <p><?=$characters[1]['name']?></p>
+                  </div>
+                  <div class="sub">
+                     <p><?=$characters[1]['weapon_name']?></p></div>
+               </div>
+            </div>
+         </div>
+      </a>
+      
+      
+      
       <div class="option active champion-geo2" >
       <div class="shadow"></div>
       <div class="label">

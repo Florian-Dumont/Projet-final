@@ -48,7 +48,7 @@ class AuthenticationController
     function admin() : void
     {
         if($_SESSION['user']['is_admin']==1){ 
-        require "../admin.phtml";
+        require "../page/admin.phtml";
         } 
         else{
         echo "<h1 class='notfound'>Loupé , la page n'existe pas !</br> 
