@@ -23,10 +23,12 @@
         
         <a class="log-out" href="deconnexion.php"><i class="fa-solid fa-arrow-right-from-bracket">
             
-            
-            
         </i></a>
+        
         <?php
+        
+        //verification si l'utilisateur est connecté et si il a le role d'admin , si oui au deux => on affiche le lien vers la page administrateur
+        
         if(isset($_SESSION['user']) && ($_SESSION['user']['is_admin'] == 1 ))
         {
             echo "<a class='admin-panel' href='index.php?route=admin'>Panel admin</a>";    

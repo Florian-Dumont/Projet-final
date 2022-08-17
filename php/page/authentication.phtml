@@ -58,7 +58,7 @@
                         }else
                         {
                             
-                            $sql ="SELECT * FROM users WHERE email = :email";
+                            $sql ="SELECT ID, name, email, password, is_admin FROM users WHERE email = :email";
                         
                         $query = $ddb->db->prepare($sql);
                         $query->bindValue(":email", $_POST["emailconnexion"]);

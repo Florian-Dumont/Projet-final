@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html lang="fr">
-<?php include "../layout/metadata.php" ?>
+<?php include "../layout/metadata.php"; 
+require "../src/managers/Buildmanager.php";?>
+
     <body>
    <div class="build_disclaimer">
            <p>Ceci n'est qu'une proposition de build, d'autres variantes existes </p>
@@ -9,8 +11,12 @@
        <div class="build_layout">
                
          <?php
-         include "../src/managers/Buildmanager.php"
+         $characterId = $_GET['characterId'];
+         $bm = new Buildmanager();
+         $build = $bm->getBuildByCharacterId($characterId);
          ?>      
+        <img class="build_layout" src = <?=$build?> >
+
                
        </div> 
   
