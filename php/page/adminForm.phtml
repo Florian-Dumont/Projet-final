@@ -2,10 +2,10 @@
 
 $ddb = new Dbconnect();
 
-var_dump($_POST);
+
 if(!empty($_POST)){
         if(
-                isset($_POST['charname'],$_POST['weapon-type'],$_POST['element-type'],$_POST['faceUpload'], $_POST['buildUpload'])
+                isset($_POST['charname'],$_POST['weapon-type'],$_POST['element-type'],$_FILES['faceUpload']['full_path'], $_FILES['buildUpload']['full_path'])
         ){
                 $charname = strip_tags($_POST['charname']);
                 $description = htmlspecialchars($_POST['description']);
@@ -22,25 +22,36 @@ if(!empty($_POST)){
                 $weaponicon = "../../ressources/sword.png";
         }
         
-        $sql1 = "INSERT INTO characters (name, portrait_url, category_id, weapon-name, weapon-icon) VALUE (:charname, :faceUpload, :element-type,:weapon-type, :weapon-icon)";
+        $sql1 = "INSERT INTO characters (name, portrait_url, category_id, weapon_name, weapon_icon) VALUE (:charname, :faceUpload, :element_type, :weapon_type, :weapon_icon)";
         
         $query = $ddb->db->prepare($sql1);
         $query->bindValue(':charname', $charname);
-        $query->bindValue(':weapon-type', $_POST['weapon-type']);
-        $query->bindValue(':element-type',$_POST['element-type']);
-        $query->bindValue(':faceUpload',$_POST['faceUpload']);
-        $query->bindvalue(':weapon-icon',$weaponicon);
-        
+        $query->bindValue(':faceUpload',$_FILES['faceUpload']['full_path']);
+        $query->bindValue(':element_type',intval($_POST['element-type']));
+        $query->bindValue(':weapon_type', $_POST['weapon-type']);
+        $query->bindValue(':weapon_icon',$weaponicon);
+        var_dump($_POST['weapon-type']);
+        var_dump($_POST['element-type']);
+        var_dump(intval($_POST['element-type']));
+        var_dump($_FILES['faceUpload']['full_path']);
+        var_dump($charname);
+        var_dump($weaponicon);
         $query->execute();
         
-        $id = $this->db->lastInsertId();
+        $id = $ddb->db->lastInsertId();
 
         
-        // $sql3 = "INSERT INTO builds (description) VALUE (:description) WHERE character_ID = :character_id";
-        // $query = $ddb->db->prepare($sql3);
-        // $query->bindvalue(':character_id',$id );
-        // $query->bindvalue(':description', $description);
-        // $query->execute();
+        $sql3 = "INSERT INTO builds (description, image_URL) VALUE (:description, :image_url) WHERE character_id = :character_id";
+        $query = $ddb->db->prepare($sql3);
+        $query->bindValue(':character_id',intval($id) );
+        $query->bindValue(':description', $description);
+        $query->bindValue(':image_url', $_FILES['buildUpload']['full_path']);
+        var_dump($id);
+        var_dump(intval($id));
+        
+        var_dump($description);
+        var_dump($_FILES['buildUpload']['full_path']);
+        $query->execute();
         
 }
 
