@@ -1,109 +1,42 @@
 <!DOCTYPE html>
 <html lang="fr">
 <?php include "../layout/metadata.php" ?>
+<?php require "../src/managers/CharacterManagers.php";
+$cm = new CharacterManagers();
+$characters = $cm->getCharactersByCategoryId(1);
+
+?>
     <body>
    
         
    <div class="options-wrapper">
    <div class="options">
-      <a href="?route=build&characterId=2"class="option active champion-anemo1">
+      <?php
+      
+      for($i=0, $max=count($characters); $i < $max; $i++){
+         ?>
+         
+         <a href="?route=build&characterId=<?=$characters[$i]['ID']?>"class="option active champion-geo<?=$i+1?>">
+            <img class="option active face" src="<?=$characters[$i]['portrait_url']?>" alt="">
          <div class="" >
             <div class="shadow"></div>
             <div class="label">
                <div class="icon">
-                  <img class="icon" src="../../ressources/sword.png">
+                  <img class="icon" src=<?=$characters[$i]['weapon_icon']?>>
                </div>
                <div class="info">
-                  <div class="main">Jean</div>
-                  <div class="sub">Epée à une main</div>
+                  <div class="main">
+                     <p><?=$characters[$i]['name']?></p>
+                  </div>
+                     <p class="sub"><?=$characters[$i]['weapon_name']?></p>
                </div>
+               
             </div>
          </div>
-      </a>   
-      <div class="option active champion-anemo2" >
-      <div class="shadow"></div>
-      <div class="label">
-         <div class="icon">
-            <img class="icon" src="../../ressources/sword.png">
-         </div>
-         <div class="info">
-            <div class="main">Kaedehara_Kazuha</div>
-            <div class="sub">Epée à une main</div>
-         </div>
-      </div>
-   </div>
-      <div class="option active champion-anemo3" >
-      <div class="shadow"></div>
-      <div class="label">
-         <div class="icon">
-            <img class="icon" src="../../ressources/espadon.png">
-         </div>
-         <div class="info">
-            <div class="main">Sayu</div>
-            <div class="sub">Epée a deux mains</div>
-         </div>
-      </div>
-   </div>
-      <div class="option active champion-anemo4" >
-      <div class="shadow"></div>
-      <div class="label">
-         <div class="icon">
-            <img class="icon" src="../../ressources/catalyst.png">
-         </div>
-         <div class="info">
-            <div class="main">Shikanoin Heizou</div>
-            <div class="sub">Catalyseur</div>
-         </div>
-      </div>
-   </div>
-      <div class="option active champion-anemo5" >
-      <div class="shadow"></div>
-      <div class="label">
-         <div class="icon">
-            <img class="icon" src="../../ressources/catalyst.png">
-         </div>
-         <div class="info">
-            <div class="main">Sucrose</div>
-            <div class="sub">Catalyseur'</div>
-         </div>
-      </div>
-   </div>
-      <div class="option active champion-anemo6" >
-      <div class="shadow"></div>
-      <div class="label">
-         <div class="icon">
-            <img class="icon" src="../../ressources/sword.png">
-         </div>
-         <div class="info">
-            <div class="main">Voyageur</div>
-            <div class="sub">Epée à une main</div>
-         </div>
-      </div>
-   </div>
-      <div class="option active champion-anemo7" >
-      <div class="shadow"></div>
-      <div class="label">
-         <div class="icon">
-            <img class="icon" src="../../ressources/catalyst.png">
-         </div>
-         <div class="info">
-            <div class="main">Venti</div>
-            <div class="sub">Catalyseur</div>
-         </div>
-      </div>
-   </div>
-   <div class="option active champion-anemo8" >
-      <div class="shadow"></div>
-      <div class="label">
-         <div class="icon">
-            <img class="icon" src="../../ressources/lance.png">
-         </div>
-         <div class="info">
-            <div class="main">Xiao</div>
-            <div class="sub">Arme d'hast</div>
-         </div>
-      </div>
-   </div>
+      </a>
+      <?php
+      }
+      ?>
 </div>
 </div>
 </body>

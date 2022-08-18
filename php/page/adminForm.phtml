@@ -1,0 +1,34 @@
+<?php include "../../sass/layout/metadate.php";
+
+$ddb = new Dbconnect();
+
+if(!empty($POST)){
+        if(
+                isset($_POST['charname'],$_POST['weapon-type'],$_POST['element-type'],$_POST['faceUpload'], $_POST['buildUpload'],$_POST['description'])
+        ){
+                $charname = strip_tags($_POST['charname']);
+                $description = htmlspecialchars($_POST['description']);
+                
+        }
+        
+        $sql1 = "INSERT INTO characters (name, portrait_url, category_id, weapon-name, weapon-icon) VALUE (:charmane, :faceUpload, :element-type,:weapon-type, :weapon-icon)";
+        
+        $query = $ddb->db->prepare($sql1);
+        $query->bindValue(':charname', $charname);
+        
+        $query->execute();
+        
+        $sql2 = "INSERT INTO builds (description) VALUE (:description)";
+        $query = $ddb->db->prepare($sql2);
+        $query->bindvalue(':description', $description);
+        $query->execute();
+}
+
+
+
+
+
+
+
+
+?>

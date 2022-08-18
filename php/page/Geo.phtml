@@ -9,14 +9,15 @@ $characters = $cm->getCharactersByCategoryId(6);
     <body>
         
    <div class="options-wrapper">
-   <div class="options">
+      <div class="options">
       
       <?php
       
       for($i=0, $max=count($characters); $i < $max; $i++){
          ?>
          
-         <a href="?route=build&characterId=<?=$characters[$i]['ID']?>"class="option active champion-geo1">
+         <a href="?route=build&characterId=<?=$characters[$i]['ID']?>"class="option active champion-geo<?=$i+1?>">
+            <img class="option active face" src="<?=$characters[$i]['portrait_url']?>" alt="">
          <div class="" >
             <div class="shadow"></div>
             <div class="label">
@@ -27,155 +28,17 @@ $characters = $cm->getCharactersByCategoryId(6);
                   <div class="main">
                      <p><?=$characters[$i]['name']?></p>
                   </div>
-                  <div class="sub">
-                     <p><?=$characters[$i]['weapon_name']?></p></div>
+                     <p class="sub"><?=$characters[$i]['weapon_name']?></p>
                </div>
+               
             </div>
          </div>
       </a>
-      
-         <?php
+      <?php
       }
-      
-      
       ?>
-      <a href="?route=build&characterId=<?=$characters[0]['ID']?>"class="option active champion-geo1">
-         <div class="" >
-            <div class="shadow"></div>
-            <div class="label">
-               <div class="icon">
-                  <img class="icon" src=<?=$characters[0]['weapon_icon']?>>
-               </div>
-               <div class="info">
-                  <div class="main">
-                     <p><?=$characters[0]['name']?></p>
-                  </div>
-                  <div class="sub">
-                     <p><?=$characters[0]['weapon_name']?></p></div>
-               </div>
-            </div>
-         </div>
-      </a>
       
-      <a href="?route=build&characterId=<?=$characters[1]['ID']?>"class="option active champion-geo1">
-         <div class="" >
-            <div class="shadow"></div>
-            <div class="label">
-               <div class="icon">
-                  <img class="icon" src=<?=$characters[1]['weapon_icon']?>>
-               </div>
-               <div class="info">
-                  <div class="main">
-                     <p><?=$characters[1]['name']?></p>
-                  </div>
-                  <div class="sub">
-                     <p><?=$characters[1]['weapon_name']?></p></div>
-               </div>
-            </div>
-         </div>
-      </a>
-      
-      
-      
-      <div class="option active champion-geo2" >
-      <div class="shadow"></div>
-      <div class="label">
-         <div class="icon">
-            <img class="icon" src="../../ressources/catalyst.png">
-         </div>
-         <div class="info">
-            <div class="main">
-               <p>Ningguang</p>
-            </div>
-            <div class="sub">
-               <p>Catalyseur</p>
-            </div>
-         </div>
       </div>
    </div>
-      <div class="option">
-         <a href="?route=build&characterId=3"class="option active champion-geo3">
-            <div class="shadow"></div>
-            <div class="label">
-               <div class="icon">
-                  <img class="icon" src="../../ressources/arc.png">
-               </div>
-               <div class="info">
-                  <div class="main">
-                     <p>Gorou</p>
-                  </div>
-                  <div class="sub">
-                     <p>Archer</p>
-                  </div>
-               </div>
-            </div>
-         </div>
-         </a>
-      <div class="option active champion-geo4" >
-      <div class="shadow"></div>
-      <div class="label">
-         <div class="icon">
-            <img class="icon" src="../../ressources/espadon.png">
-         </div>
-         <div class="info">
-            <div class="main">
-               <p>Noelle</p>
-            </div>
-            <div class="sub">
-               <p>Epée à deux mains</p>
-            </div>
-         </div>
-      </div>
-   </div>
-      <div class="option active champion-geo5" >
-      <div class="shadow"></div>
-      <div class="label">
-         <div class="icon">
-            <img class="icon" src="../../ressources/lance.png">
-         </div>
-         <div class="info">
-            <div class="main">
-               <p>Zhongli</p>
-            </div>
-            <div class="sub">
-               <p>Arme d'hast</p>
-            </div>
-         </div>
-      </div>
-   </div>
-      <div class="option active champion-geo6" >
-      <div class="shadow"></div>
-      <div class="label">
-         <div class="icon">
-            <img class="icon" src="../../ressources/sword.png">
-         </div>
-         <div class="info">
-            <div class="main">
-               <p>Albedo</p>
-            </div>
-            <div class="sub">
-               <p>Epée à une main</p>
-            </div>
-         </div>
-      </div>
-   </div>
-      <div class="option active champion-geo7" >
-      <div class="shadow"></div>
-      <div class="label">
-         <div class="icon">
-            <img class="icon" src="../../ressources/sword.png">
-         </div>
-         <div class="info">
-            <div class="main">
-               <p>Voyageurs</p>
-            </div>
-            <div class="sub">
-               <p>Epée à une main</p>
-            </div>
-         </div>
-      </div>
-   </div>
-</div>
-</div>
 </body>
 </html>

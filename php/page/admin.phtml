@@ -2,7 +2,8 @@
 
 <?php
 
-require "../uploads/fileUploader.php";
+require "../../uploads/fileUploader.php";
+require "adminForm.phtml";
 
 if(isset($_POST["submit"]))
 {
@@ -26,12 +27,61 @@ if(isset($_POST["submit"]))
         
     </head>
     <body>
-        <h3>crée un perso</h3>
-        <form action="index.php" method="post" enctype="multipart/form-data">
-            Select image to upload:
-              <input type="file" name="fileToUpload" id="fileToUpload">
-              <input type="submit" value="Upload Image" name="submit">
+        
+        
+        <form class="admin-form" action="index.php" method="post" enctype="multipart/form-data">
+            <fieldset>
+                <h3>Crée un personage</h3>
+                <label for="charname">Nom du personnage</label>
+                <input type="text" name="charname" id="charname">
+                
+            </fieldset>
+            
+            <fieldset>
+                <label for="weapon-type">Choisie le type d'arme du personnage</label>
+                <select name="weapon-type" id="weapon-type">
+                    <option value="">--Choisie le type d'arme du personnage--</option>
+                    <option value="arc">1 - Arc</option>
+                    <option value="catalyst">2 - Catalyseur</option>
+                    <option value="espadon">3 - Epée a deux mains</option>
+                    <option value="lance">4 - Lance</option>
+                    <option value="sword">5 - Epée a une main</option>
+                </select> 
+            </fieldset>
+            
+            <fieldset>
+                <label for="element-type">Choisie le type d'élement du personnage</label>
+                <select name="element-type" id="element-type">
+                    <option value="">Choisie le type d'element du personnage</option>
+                    <option value="anemo">1 - Anemo</option>
+                    <option value="cryo">2 - Cryo</option>
+                    <option value="electro">3 - Electro</option>
+                    <option value="geo">4 - Géo</option>
+                    <option value="hydro">5 - Hydro</option>
+                    <option value="pyro">6 - Pyro</option>
+                </select>
+            </fieldset>
+            
+            <fieldset>
+                <label for="faceUpload">Portrait du personnage</label>
+              <input type="file" name="faceUpload" id="faceUpload">
+            </fieldset>
+            
+            <fieldset>
+                <label for="faceUpload">Image du build du personnage</label>
+                <input type="file" name="buildUpload" id="buildUpload">
+            </fieldset>
+            
+            <fieldset>
+                <textarea id="description" name="description"
+                          rows="5" cols="50"> Description du build
+                </textarea>            
+            </fieldset>
+            
+            <input type="submit" value="Crée le personnage">
+            
         </form>
+              
     </body>
 </html>                                
         

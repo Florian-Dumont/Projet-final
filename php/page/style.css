@@ -119,6 +119,27 @@ a.css-6kluu6 {
     font-size: 1.5em; }
 
 /****** FORM**********/
+.admin-form {
+  font-size: 1.2em;
+  color: white;
+  position: relative;
+  text-align: center;
+  align-items: center;
+  margin-top: 2em;
+  border: 1px solid white;
+  /****** Selectionnée spécifiquement l'input submit ***********/ }
+  .admin-form label + input {
+    margin: 0.5em; }
+  .admin-form fieldset {
+    margin: 1em;
+    border-style: none; }
+  .admin-form textarea::placeholder {
+    color: black; }
+  .admin-form input[type=submit] {
+    margin-bottom: 2em; }
+  .admin-form h3 {
+    font-size: 1.5em; }
+
 .login-form {
   border-top: 1px solid #CCC;
   position: relative;
@@ -385,10 +406,13 @@ body .options .option {
   cursor: pointer;
   transition: 1.8s cubic-bezier(0.05, 0.61, 0.41, 0.95); }
 
+img .face {
+  height: 500px; }
+
 body .options .option.active {
   flex-grow: 10000;
   transform: scale(1);
-  max-width: 600px;
+  max-width: 900px;
   margin: 0px;
   border-radius: 40px;
   background-size: auto 100%;
@@ -465,45 +489,12 @@ body .options .option .label .info .main {
   font-size: 1.2rem; }
 
 body .options .option .label .info .sub {
-  transition-delay: 0.1s; }
+  transition-delay: 0.1s;
+  position: relative;
+  bottom: 180%; }
 
 /*******************************************************************************************************************/
 /****************image champion géo*********************/
-.champion-geo1 {
-  background-image: url("../../ressources/itto_face.png");
-  background-size: cover;
-  background-repeat: no-repeat; }
-
-.champion-geo2 {
-  background-image: url("../../ressources/Character_Ningguang_Thumb.png");
-  background-size: cover;
-  background-repeat: no-repeat; }
-
-.champion-geo3 {
-  background-image: url("../../ressources/gorou_face.png");
-  background-size: cover;
-  background-repeat: no-repeat; }
-
-.champion-geo4 {
-  background-image: url("../../ressources/Character_Noelle_Thumb.png");
-  background-size: cover;
-  background-repeat: no-repeat; }
-
-.champion-geo5 {
-  background-image: url("../../ressources/Character_Zhongli_Thumb.png");
-  background-size: cover;
-  background-repeat: no-repeat; }
-
-.champion-geo6 {
-  background-image: url("../../ressources/Character_Albedo_Thumb.png");
-  background-size: cover;
-  background-repeat: no-repeat; }
-
-.champion-geo7 {
-  background-image: url("../../ressources/travelers-aether-and-lumine_png_1640.png");
-  background-size: cover;
-  background-repeat: no-repeat; }
-
 /********************images champion anemo *********************/
 .champion-anemo1 {
   background-image: url("../../ressources/Character_Jean_Thumb.png");

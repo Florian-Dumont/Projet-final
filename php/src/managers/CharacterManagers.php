@@ -14,7 +14,7 @@ class CharacterManagers{
         $query->execute();
                         
         $characters = $query->fetchAll(PDO::FETCH_ASSOC);
-        var_dump($characters);
+        
 
         return $characters;   
                 

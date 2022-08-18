@@ -1,96 +1,142 @@
 <!DOCTYPE html>
 <html lang="fr">
 <?php include "../layout/metadata.php" ?>
+<?php require "../src/managers/CharacterManagers.php";
+$cm = new CharacterManagers();
+$characters = $cm->getCharactersByCategoryId(7);
+
+?>
     <body>
+   
+        
    <div class="options-wrapper">
    <div class="options">
-      <a href="#"class="option active champion-hydro1">
+      <?php
+      
+      for($i=0, $max=count($characters); $i < $max; $i++){
+         ?>
+         
+         <a href="?route=build&characterId=<?=$characters[$i]['ID']?>"class="option active champion-geo<?=$i+1?>">
+            <img class="option active face" src="<?=$characters[$i]['portrait_url']?>" alt="">
          <div class="" >
             <div class="shadow"></div>
             <div class="label">
                <div class="icon">
-                  <img class="icon" src="../../ressources/catalyst.png">
+                  <img class="icon" src=<?=$characters[$i]['weapon_icon']?>>
                </div>
                <div class="info">
-                  <div class="main">Barbara</div>
-                  <div class="sub">Catalyseur</div>
+                  <div class="main">
+                     <p><?=$characters[$i]['name']?></p>
+                  </div>
+                     <p class="sub"><?=$characters[$i]['weapon_name']?></p>
                </div>
+               
             </div>
          </div>
-      </a>   
-      <div class="option active champion-hydro2" >
-      <div class="shadow"></div>
-      <div class="label">
-         <div class="icon">
-            <img class="icon" src="../../ressources/sword.png">
-         </div>
-         <div class="info">
-            <div class="main">Kamisato Ayato</div>
-            <div class="sub">Epée a une mains</div>
-         </div>
-      </div>
-   </div>
-      <div class="option active champion-hydro3" >
-      <div class="shadow"></div>
-      <div class="label">
-         <div class="icon">
-            <img class="icon" src="../../ressources/catalyst.png">
-         </div>
-         <div class="info">
-            <div class="main">Mona</div>
-            <div class="sub">Catalyseur</div>
-         </div>
-      </div>
-   </div>
-      <div class="option active champion-hydro4" >
-      <div class="shadow"></div>
-      <div class="label">
-         <div class="icon">
-            <img class="icon" src="../../ressources/catalyst.png">
-         </div>
-         <div class="info">
-            <div class="main">Sangonomiya Kokomi</div>
-            <div class="sub">Catalyseur</div>
-         </div>
-      </div>
-   </div>
-      <div class="option active champion-hydro5" >
-      <div class="shadow"></div>
-      <div class="label">
-         <div class="icon">
-            <img class="icon" src="../../ressources/arc.png">
-         </div>
-         <div class="info">
-            <div class="main">Tartaglia</div>
-            <div class="sub">Archére</div>
-         </div>
-      </div>
-   </div>
-      <div class="option active champion-hydro6" >
-      <div class="shadow"></div>
-      <div class="label">
-         <div class="icon">
-            <img class="icon" src="../../ressources/sword.png">
-         </div>
-         <div class="info">
-            <div class="main">Xingqiu</div>
-            <div class="sub">Epée à une main</div>
-         </div>
-      </div>
-   </div>
-      <div class="option active champion-hydro7" >
-      <div class="shadow"></div>
-      <div class="label">
-         <div class="icon">
-            <img class="icon" src="../../ressources/arc.png">
-         </div>
-         <div class="info">
-            <div class="main">Yelan</div>
-            <div class="sub">Archére</div>
-         </div>
-      </div>
-   </div>
+      </a>
+      <?php
+      }
+      ?>
 </div>
 </div>
 </body>
 </html>
+
+
+
+<!--<!DOCTYPE html>-->
+<!--<html lang="fr">-->
+<!--<?php include "../layout/metadata.php" ?>-->
+<!--    <body>-->
+<!--   <div class="options-wrapper">-->
+<!--   <div class="options">-->
+<!--      <a href="#"class="option active champion-hydro1">-->
+<!--         <div class="" >-->
+<!--            <div class="shadow"></div>-->
+<!--            <div class="label">-->
+<!--               <div class="icon">-->
+<!--                  <img class="icon" src="../../ressources/catalyst.png">-->
+<!--               </div>-->
+<!--               <div class="info">-->
+<!--                  <div class="main">Barbara</div>-->
+<!--                  <div class="sub">Catalyseur</div>-->
+<!--               </div>-->
+<!--            </div>-->
+<!--         </div>-->
+<!--      </a>   -->
+<!--      <div class="option active champion-hydro2" >-->
+<!--      <div class="shadow"></div>-->
+<!--      <div class="label">-->
+<!--         <div class="icon">-->
+<!--            <img class="icon" src="../../ressources/sword.png">-->
+<!--         </div>-->
+<!--         <div class="info">-->
+<!--            <div class="main">Kamisato Ayato</div>-->
+<!--            <div class="sub">Epée a une mains</div>-->
+<!--         </div>-->
+<!--      </div>-->
+<!--   </div>-->
+<!--      <div class="option active champion-hydro3" >-->
+<!--      <div class="shadow"></div>-->
+<!--      <div class="label">-->
+<!--         <div class="icon">-->
+<!--            <img class="icon" src="../../ressources/catalyst.png">-->
+<!--         </div>-->
+<!--         <div class="info">-->
+<!--            <div class="main">Mona</div>-->
+<!--            <div class="sub">Catalyseur</div>-->
+<!--         </div>-->
+<!--      </div>-->
+<!--   </div>-->
+<!--      <div class="option active champion-hydro4" >-->
+<!--      <div class="shadow"></div>-->
+<!--      <div class="label">-->
+<!--         <div class="icon">-->
+<!--            <img class="icon" src="../../ressources/catalyst.png">-->
+<!--         </div>-->
+<!--         <div class="info">-->
+<!--            <div class="main">Sangonomiya Kokomi</div>-->
+<!--            <div class="sub">Catalyseur</div>-->
+<!--         </div>-->
+<!--      </div>-->
+<!--   </div>-->
+<!--      <div class="option active champion-hydro5" >-->
+<!--      <div class="shadow"></div>-->
+<!--      <div class="label">-->
+<!--         <div class="icon">-->
+<!--            <img class="icon" src="../../ressources/arc.png">-->
+<!--         </div>-->
+<!--         <div class="info">-->
+<!--            <div class="main">Tartaglia</div>-->
+<!--            <div class="sub">Archére</div>-->
+<!--         </div>-->
+<!--      </div>-->
+<!--   </div>-->
+<!--      <div class="option active champion-hydro6" >-->
+<!--      <div class="shadow"></div>-->
+<!--      <div class="label">-->
+<!--         <div class="icon">-->
+<!--            <img class="icon" src="../../ressources/sword.png">-->
+<!--         </div>-->
+<!--         <div class="info">-->
+<!--            <div class="main">Xingqiu</div>-->
+<!--            <div class="sub">Epée à une main</div>-->
+<!--         </div>-->
+<!--      </div>-->
+<!--   </div>-->
+<!--      <div class="option active champion-hydro7" >-->
+<!--      <div class="shadow"></div>-->
+<!--      <div class="label">-->
+<!--         <div class="icon">-->
+<!--            <img class="icon" src="../../ressources/arc.png">-->
+<!--         </div>-->
+<!--         <div class="info">-->
+<!--            <div class="main">Yelan</div>-->
+<!--            <div class="sub">Archére</div>-->
+<!--         </div>-->
+<!--      </div>-->
+<!--   </div>-->
+<!--</div>-->
+<!--</div>-->
+<!--</body>-->
+<!--</html>-->

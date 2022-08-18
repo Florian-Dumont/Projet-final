@@ -5,7 +5,7 @@
  * @author Mari Doucet
 */
 
-require "Media.php";
+require "media.php";
 
 class FileUploader
 {
