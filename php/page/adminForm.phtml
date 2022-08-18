@@ -1,27 +1,47 @@
-<?php include "../../sass/layout/metadate.php";
+<?php include "../layout/metadata.php";
 
 $ddb = new Dbconnect();
 
-if(!empty($POST)){
+var_dump($_POST);
+if(!empty($_POST)){
         if(
-                isset($_POST['charname'],$_POST['weapon-type'],$_POST['element-type'],$_POST['faceUpload'], $_POST['buildUpload'],$_POST['description'])
+                isset($_POST['charname'],$_POST['weapon-type'],$_POST['element-type'],$_POST['faceUpload'], $_POST['buildUpload'])
         ){
                 $charname = strip_tags($_POST['charname']);
                 $description = htmlspecialchars($_POST['description']);
                 
+        }if($_POST['weapon-type']=='arc'){
+                $weaponicon = "../../ressources/arc.png";
+        }if($_POST['weapon-type']=='catalyst'){
+                $weaponicon = "../../ressources/catalyst.png";
+        }if($_POST['weapon-type']=='espadon'){
+                $weaponicon = "../../ressources/espadon.png";
+        }if($_POST['weapon-type']=='lance'){
+                $weaponicon = "../../ressources/lance.png";
+        }if($_POST['weapon-type']=='sword'){
+                $weaponicon = "../../ressources/sword.png";
         }
         
-        $sql1 = "INSERT INTO characters (name, portrait_url, category_id, weapon-name, weapon-icon) VALUE (:charmane, :faceUpload, :element-type,:weapon-type, :weapon-icon)";
+        $sql1 = "INSERT INTO characters (name, portrait_url, category_id, weapon-name, weapon-icon) VALUE (:charname, :faceUpload, :element-type,:weapon-type, :weapon-icon)";
         
         $query = $ddb->db->prepare($sql1);
         $query->bindValue(':charname', $charname);
+        $query->bindValue(':weapon-type', $_POST['weapon-type']);
+        $query->bindValue(':element-type',$_POST['element-type']);
+        $query->bindValue(':faceUpload',$_POST['faceUpload']);
+        $query->bindvalue(':weapon-icon',$weaponicon);
         
         $query->execute();
         
-        $sql2 = "INSERT INTO builds (description) VALUE (:description)";
-        $query = $ddb->db->prepare($sql2);
-        $query->bindvalue(':description', $description);
-        $query->execute();
+        $id = $this->db->lastInsertId();
+
+        
+        // $sql3 = "INSERT INTO builds (description) VALUE (:description) WHERE character_ID = :character_id";
+        // $query = $ddb->db->prepare($sql3);
+        // $query->bindvalue(':character_id',$id );
+        // $query->bindvalue(':description', $description);
+        // $query->execute();
+        
 }
 
 

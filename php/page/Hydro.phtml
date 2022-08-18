@@ -16,7 +16,7 @@ $characters = $cm->getCharactersByCategoryId(7);
       for($i=0, $max=count($characters); $i < $max; $i++){
          ?>
          
-         <a href="?route=build&characterId=<?=$characters[$i]['ID']?>"class="option active champion-geo<?=$i+1?>">
+         <a href="?route=build&characterId=<?=$characters[$i]['ID']?>"class="option active">
             <img class="option active face" src="<?=$characters[$i]['portrait_url']?>" alt="">
          <div class="" >
             <div class="shadow"></div>
