@@ -11,13 +11,21 @@ require "../src/managers/Buildmanager.php";?>
        <div class="build_layout">
                
          <?php
+
+
          $characterId = $_GET['characterId'];
          $bm = new Buildmanager();
          $build = $bm->getBuildByCharacterId($characterId);
+         
+         var_dump($build);
+        var_dump($_FILES);
+        $buildUrl="../ressources/".$build;
+        var_dump($buildUrl);
+        
          ?>      
-        <img class="build_layout" src ="<?=$build['image_URL']?>">
+        <img class="build_layout" src=<?=$buildUrl?>>
 <?php
-var_dump($build)
+
 ?>
                
        </div> 

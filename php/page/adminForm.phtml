@@ -42,10 +42,11 @@ if(!empty($_POST)){
         $query = $ddb->db->prepare($sql3);
         $query->bindValue(':character_id',intval($id) );
         $query->bindValue(':description', $description);
-        $query->bindValue(':image_url', $_FILES['buildUpload']['full_path']);
+        $query->bindValue(':image_url', $_FILES['buildUpload']['name']);
         
         var_dump($id);
         var_dump(intval($id));
+        var_dump($_FILES);
        
         
         try{
