@@ -2,6 +2,14 @@
 <html lang="fr">
 <?php session_start();?>
 <?php require "../classes/db_connect.php"?>
+<?php require_once "../../uploads/fileUploader.php";
+/*try{
+    // $pdo = new PDO("n'importe quoi !");
+} catch(Exception $e){
+    echo $e->getMessage();
+}*/
+?>
+
 <?php 
     if(!empty($_POST)){
         
@@ -15,7 +23,7 @@
         <?php include "../layout/header.php" ?>
         <?php 
 if(!(isset($_GET["route"]) && $_GET["route"] === "connexion")){
-    include "../layout/navigation.php" ;
+    include "../layout/navigation.php";
 }
 ?>
         

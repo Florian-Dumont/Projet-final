@@ -23,10 +23,16 @@ class FileUploader
     private function checkFileSize(int $fileSize)
     {
         // vérifier que le fichier n'est pas trop gros
+        if($fileSize > $maxFileSize){
+            echo "fichier trop volumineux";
+        }
     }
     
     private function checkFileType(string $fileType) : bool
     {
+        if($fileType != $allowedFileTypes){
+            echo "Mauvais format de fichier";
+        }
         // vérifier que le type est bien l'un des types autorisés
     }
     

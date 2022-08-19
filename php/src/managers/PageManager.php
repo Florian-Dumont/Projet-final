@@ -8,9 +8,18 @@ class PageManager
     
     function __construct()
     {
-        $user='floriandumont';
-                        $pass='5beb219368b298ba060d732bab933890';
-                        $this->db = new PDO('mysql:host=db.3wa.io;port=3306;dbname=floriandumont_teyvat', $user, $pass);
+        
+        $this->db = new PDO(
+        'mysql:host=db.3wa.io;port=3306;dbname=floriandumont_teyvat;charset=UTF8',
+        'floriandumont',
+        '5beb219368b298ba060d732bab933890'
+        );
+        
+        // $user='floriandumont';
+        // $pass='5beb219368b298ba060d732bab933890';
+        // $dsn = "mysql:dbname=floriandumont_teyvat;charset=UTF8;host=db.3wa.io;port=3306"; 
+        // $this->db = new PDO($dsn, $user, $pass);
+        
     }
     
     public function getAllPagesSlugs() : array

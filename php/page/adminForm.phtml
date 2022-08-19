@@ -1,5 +1,6 @@
 <?php include "../layout/metadata.php";
 
+
 $ddb = new Dbconnect();
 
 
@@ -49,16 +50,19 @@ if(!empty($_POST)){
         var_dump($_FILES);
        
         
-        try{
-    $pdo = new PDO("n'importe quoi !");
+        /*try{
+    //$pdo = new PDO("n'importe quoi !");
 } catch(Exception $e){
     echo $e->getMessage();
-}
+}*/
         var_dump($description);
         var_dump($_FILES['buildUpload']['full_path']);
         
         $query->execute();
-         var_dump($query);
+        
+        $uploader = new FileUploader();
+        
+        $media = $uploader->upload($_FILES["fileToUpload"]);
 }
 
 
