@@ -18,6 +18,7 @@ class Buildmanager{
         $imageUrl = $image['image_url'];
         
         return $imageUrl;
+        var_dump($image);
     }    
 }      
 

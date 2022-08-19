@@ -2,7 +2,7 @@
 <html lang="fr">
 <?php session_start();?>
 <?php require "../classes/db_connect.php"?>
-<?php require_once "../../uploads/fileUploader.php";
+<?php require_once "./uploads/fileUploader.php";
 /*try{
     // $pdo = new PDO("n'importe quoi !");
 } catch(Exception $e){
