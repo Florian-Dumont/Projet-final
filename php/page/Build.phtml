@@ -15,8 +15,10 @@ require "../src/managers/Buildmanager.php";?>
          $bm = new Buildmanager();
          $build = $bm->getBuildByCharacterId($characterId);
          ?>      
-        <img class="build_layout" src = <?=$build?> >
-
+        <img class="build_layout" src ="<?=$build['image_URL']?>">
+<?php
+var_dump($build)
+?>
                
        </div> 
   

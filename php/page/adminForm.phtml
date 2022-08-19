@@ -30,29 +30,34 @@ if(!empty($_POST)){
         $query->bindValue(':element_type',intval($_POST['element-type']));
         $query->bindValue(':weapon_type', $_POST['weapon-type']);
         $query->bindValue(':weapon_icon',$weaponicon);
-        var_dump($_POST['weapon-type']);
-        var_dump($_POST['element-type']);
-        var_dump(intval($_POST['element-type']));
-        var_dump($_FILES['faceUpload']['full_path']);
-        var_dump($charname);
-        var_dump($weaponicon);
+        
         $query->execute();
         
         $id = $ddb->db->lastInsertId();
+        var_dump($id);
 
         
-        $sql3 = "INSERT INTO builds (description, image_URL) VALUE (:description, :image_url) WHERE character_id = :character_id";
+        $sql3 = "INSERT INTO builds (description, image_URL, character_id) VALUE (:description, :image_url, :character_id)";
+        
         $query = $ddb->db->prepare($sql3);
         $query->bindValue(':character_id',intval($id) );
         $query->bindValue(':description', $description);
         $query->bindValue(':image_url', $_FILES['buildUpload']['full_path']);
+        
         var_dump($id);
         var_dump(intval($id));
+       
         
+        try{
+    $pdo = new PDO("n'importe quoi !");
+} catch(Exception $e){
+    echo $e->getMessage();
+}
         var_dump($description);
         var_dump($_FILES['buildUpload']['full_path']);
-        $query->execute();
         
+        $query->execute();
+         var_dump($query);
 }
 
 
