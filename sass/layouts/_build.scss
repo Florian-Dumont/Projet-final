@@ -19,3 +19,29 @@
         background-size: cover;
         background-repeat:no-repeat;
 }
+.comments-title{
+        padding:1px 0 1px 0;
+       text-shadow:1px 1px black;
+        position:relative;
+        left:12%;
+        bottom:1%;
+        color:white;
+        text-align:center;
+        border: 1px solid white;
+        
+        
+}
+.comments{
+        margin-top:1em;
+        max-width:800px;
+        display:block;
+        position:relative;
+        left:12%;
+        .comments_box{
+                border-style:none;
+                border-radius:20px;
+        }
+        .submit{
+                margin-top:0.3em;
+        }
+}
