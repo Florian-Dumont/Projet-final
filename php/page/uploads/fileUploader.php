@@ -9,7 +9,7 @@ require "media.php";
 
 class FileUploader
 {
-    private string $uploadFile = "uploads/";
+    private string $uploadFile = "/uploads/";
     private array $allowedFileTypes = ["png", "PNG", "jpg", "JPG", "jpeg", "JPEG"];
     private int $maxFileSize = 2000000; // 2 Mo
     
@@ -44,11 +44,12 @@ class FileUploader
         $fileName = $this->generateFileName();
         $fileType = pathinfo($originalName)["extension"];
         $url = getcwd() . $this->uploadFile . $originalName;
-        var_dump($originalName);
+        
         
         move_uploaded_file($file["tmp_name"], $url);
         
         return new Media($originalName, $fileName, $fileType, $url);
+        
     }
 }                                
    

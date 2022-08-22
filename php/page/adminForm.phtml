@@ -34,8 +34,12 @@ if(!empty($_POST)){
         
         $query->execute();
         
+        $uploader = new FileUploader();
+        
+        $media = $uploader->upload($_FILES["faceUpload"]);
+        
         $id = $ddb->db->lastInsertId();
-        var_dump($id);
+        
 
         
         $sql3 = "INSERT INTO builds (description, image_URL, character_id) VALUE (:description, :image_url, :character_id)";
@@ -45,9 +49,7 @@ if(!empty($_POST)){
         $query->bindValue(':description', $description);
         $query->bindValue(':image_url', $_FILES['buildUpload']['name']);
         
-        var_dump($id);
-        var_dump(intval($id));
-        var_dump($_FILES);
+        
        
         
         /*try{
@@ -55,8 +57,7 @@ if(!empty($_POST)){
 } catch(Exception $e){
     echo $e->getMessage();
 }*/
-        var_dump($description);
-        var_dump($_FILES['buildUpload']['full_path']);
+        
         
         $query->execute();
         

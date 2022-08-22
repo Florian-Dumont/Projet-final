@@ -17,13 +17,12 @@ require "../src/managers/Buildmanager.php";?>
          $bm = new Buildmanager();
          $build = $bm->getBuildByCharacterId($characterId);
          
-         var_dump($build);
-        var_dump($_FILES);
-        $buildUrl="/uploads/".$build;
-        var_dump($buildUrl);
+        
+        $buildUrl="./uploads/".$build;
+        
         
          ?>      
-        <img class="build_layout" src=uploads/Yelan_build.png alt="">
+        <img class="build_layout" src=<?=$buildUrl?> alt="">
 <?php
 
 ?>
