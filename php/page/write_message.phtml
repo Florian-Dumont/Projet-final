@@ -1,11 +1,11 @@
 <?php
-
+require "../src/controller/ComentsController.php"
 ?>
 
 <h2 class="comments-title">Espace commentaires</h2>
-        <form class="comments" method="POST" action=<?= 'index.php?=build&characterId='.$characterId ?>>
-                <input type="hidden" name="userId" value <?= $user_ID?>> </input>
-                <input type="hidden" name="buildId" value=<?= $build_id?>> </input>  
+        <form class="comments" method="POST" action=<?= 'index.php?route=build&characterId='.$characterId ?>>
+                <input type="hidden" name="userId" value <?= $_SESSION['user']['id']?>> </input>
+                <input type="hidden" name="buildId" value=<?= $characterId?>> </input>  
             <fieldset>
                 <textarea id="comments_box" name="comments"
                           rows="5" cols="94" placeholder="Ecrivez votre commentaire">

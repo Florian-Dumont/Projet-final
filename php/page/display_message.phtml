@@ -1,21 +1,23 @@
-<?php
-//SQUELETTE DES BULLES DE MESSAGE
-        // <div class="chatbox">
-        //         <p class="author">Author</p>
-        //                 <p class="msger">Message</p>
-                        
-        //         <p class="author">Author2</p>
-        //                 <p class="msger">Message</p>
-        // </div>
+<!DOCTYPE html>
+<html lang="fr">
 
-// On affiche la liste des messages trouvés ...
-echo '<div class="chatbox">';
+
+ 
+<div class="chatbox">
+<?php
 for($i=0,$max=count($messages);$i<$max;$i++){
     $date=date("d/m/Y",strtotime($messages[$i]["submited_date"]));
     $time=date("G:i:s",strtotime($messages[$i]["submited_date"]));
-    echo '<p class="author">'.$messages[$i]["author"].' a écrit le '.$date.' à '.$time.' </p>';
-    echo '<p class="msger".$messages[$i]["text"].</p>';
+    $username = $commentManager->getNameByUserId($messages[$i]['user_ID']);
+    
+?>    
+    <article class="comments_zone">   
+            <u><p class="author"><?=$username['name']?></u></p>
+            <p class="comments_time">a écrit le <?=$date?> à <?=$time?> </p>
+            <p class="msger"><?=$messages[$i]["text"]?></p>
+    </article>
+<?php    
 }
-echo '</div>';
-
 ?>
+</div>
+

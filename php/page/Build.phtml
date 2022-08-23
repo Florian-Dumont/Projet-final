@@ -22,14 +22,14 @@ require "../src/managers/Buildmanager.php";?>
         
         
          ?>      
-        <img class="build_layout" src=<?=$buildUrl?> alt="">
+        <img class="build_layout" src=<?=$buildUrl?> alt="image détaillé du build">
 <?php
         if(isset($_SESSION['user']))
         {
         include "write_message.phtml";
-        include "display_message.phtml";
+        include "../src/controller/Display_message_controller.php";
         }else{
-            
+            echo "Connectez vous pour avoir accés au commentaires";
         }
         
 ?>

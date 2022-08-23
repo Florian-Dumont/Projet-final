@@ -69,7 +69,7 @@ class PageManager
     
         $query = $db->prepare("INSERT INTO comments (build_ID, text, user_ID, submited_date) VALUES (:build_id,:text,:author,:submited_date)");
         $parameters = [
-        'channel_id' => $channel_id,
+        'build_id' => $characterId,
         'text' => $text,
         'author' => $author,
         'submited_date' => $date_submitted

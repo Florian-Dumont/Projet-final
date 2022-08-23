@@ -1,6 +1,14 @@
 <?php
-$build_id=$_GET['buildId'];
+require "../src/managers/Commentmanager.php";
+
+$characterId=$_GET['characterId'];
+
+
+$commentManager = new Commentmanager();
 // On récupère tous les messages du salon sélectionné en BDD
-$messages=getAllMessagesByBuildId($build_id, $db);
-require './templates/display_messages.phtml';
+$messages=$commentManager->getCommentByCharacterId($characterId);
+
+
+
+require '../page/display_message.phtml';
 ?>
