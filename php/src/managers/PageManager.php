@@ -42,4 +42,38 @@ class PageManager
         
         return new Page($result['id'], $result['slug'], $result['label']);
     }
+    //Fonction ramenant la liste de toutes les messages
+    function getAllMessages($db) : ?array{
+        $query = $db->prepare('SELECT text FROM comments');
+        $query->execute();
+        $messages = $query->fetchAll(PDO::FETCH_ASSOC);
+        return $messages;
+    }
+    function getAllMessagesByBuildId(string $channel_id, $db) : ?array{
+        $query = $db->prepare('SELECT text FROM comments WHERE build_id=:build_id');
+        $parameters = [
+        'build_id' => $build_id
+        ];
+        $query->execute($parameters);
+        $messages = $query->fetchAll(PDO::FETCH_ASSOC);
+        return $messages;
+    }
+    //Fonction permettant de créer un nouveau message
+    function addNewMessage(string $text, string $build_id, $db){
+        //préparation des données à insérer dans la table message
+        
+        $author=$username;
+        date_default_timezone_set('CET');
+        $date_submitted = date('Y-m-d G:i:s');
+    
+    
+        $query = $db->prepare("INSERT INTO comments (build_ID, text, user_ID, submited_date) VALUES (:build_id,:text,:author,:submited_date)");
+        $parameters = [
+        'channel_id' => $channel_id,
+        'text' => $text,
+        'author' => $author,
+        'submited_date' => $date_submitted
+        ];
+        $query->execute($parameters);
+    }
 }

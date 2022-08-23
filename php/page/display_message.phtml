@@ -1,0 +1,21 @@
+<?php
+//SQUELETTE DES BULLES DE MESSAGE
+        // <div class="chatbox">
+        //         <p class="author">Author</p>
+        //                 <p class="msger">Message</p>
+                        
+        //         <p class="author">Author2</p>
+        //                 <p class="msger">Message</p>
+        // </div>
+
+// On affiche la liste des messages trouvés ...
+echo '<div class="chatbox">';
+for($i=0,$max=count($messages);$i<$max;$i++){
+    $date=date("d/m/Y",strtotime($messages[$i]["submited_date"]));
+    $time=date("G:i:s",strtotime($messages[$i]["submited_date"]));
+    echo '<p class="author">'.$messages[$i]["author"].' a écrit le '.$date.' à '.$time.' </p>';
+    echo '<p class="msger".$messages[$i]["text"].</p>';
+}
+echo '</div>';
+
+?>

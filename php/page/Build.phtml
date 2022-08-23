@@ -24,18 +24,15 @@ require "../src/managers/Buildmanager.php";?>
          ?>      
         <img class="build_layout" src=<?=$buildUrl?> alt="">
 <?php
-
-?>
-        <h2 class="comments-title">Espace commentaires</h2>
-        <form class="comments" method="POST" action="">
-            <fieldset>
-                <textarea id="comments_box" name="comments"
-                          rows="5" cols="94">Ecrivez votre commentaire
-                </textarea>
+        if(isset($_SESSION['user']))
+        {
+        include "write_message.phtml";
+        }else{
+            
+        }
         
-                <button class="submit">Envoyer</button>
-            </fieldset>
-        </form>
+?>
+        
         
         
        </div> 

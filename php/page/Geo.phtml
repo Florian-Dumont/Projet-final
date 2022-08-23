@@ -18,17 +18,17 @@ $characters = $cm->getCharactersByCategoryId(6);
          
          <a href="?route=build&characterId=<?=$characters[$i]['ID']?>"class="option active champion-geo<?=$i+1?>">
             
-         <div class="option active face" >
-            <img class="option active face" src="./uploads/<?=$characters[$i]['portrait_url']?>" alt="">
+         <div class="option active" >
+            <img class=" face" src="./uploads/<?=$characters[$i]['portrait_url']?>" alt="">
             <div class="shadow"></div>
             <div class="label">
                <div class="icon">
                   <img class="icon" src=<?=$characters[$i]['weapon_icon']?>>
                </div>
                <div class="info">
-                  <div class="main">
-                     <p><?=$characters[$i]['name']?></p>
-                  </div>
+                  
+                     <p class="main"><?=$characters[$i]['name']?></p>
+                  
                      <p class="sub"><?=$characters[$i]['weapon_name']?></p>
                </div>
                

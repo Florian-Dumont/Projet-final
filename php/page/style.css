@@ -77,7 +77,7 @@ header {
 /** bloc map interactive*/
 .interactive-map {
   height: 550px;
-  width: 400px;
+  width: 350px;
   background-image: url("../../ressources/genshin-impact-carte-interactive-mihoyo.png");
   background-size: cover;
   background-position: 40% 50%;
@@ -402,7 +402,7 @@ body .options .option {
   overflow: hidden;
   min-width: 60px;
   margin: 10px;
-  background-size: auto 120%;
+  background-size: auto 100%;
   background-position: center;
   cursor: pointer;
   transition: 1.8s cubic-bezier(0.05, 0.61, 0.41, 0.95); }
@@ -410,10 +410,13 @@ body .options .option {
 body .options .option.active {
   flex-grow: 10000;
   transform: scale(1);
-  max-width: 900px;
+  width: 1200px;
+  max-width: 1200px;
   margin: 0px;
   border-radius: 40px;
   background-size: auto 100%; }
+  body .options .option.active:active {
+    transform: scale(1); }
 
 body .options .option.active .shadow {
   box-shadow: inset 0 -120px 120px -120px black, inset 0 -120px 120px -100px black; }
@@ -473,7 +476,8 @@ body .options .option .label .info {
   justify-content: center;
   margin-left: 10px;
   color: white;
-  white-space: pre; }
+  white-space: pre;
+  text-shadow: 1px 3px black; }
 
 body .options .option .label .info > div {
   position: relative;
@@ -484,235 +488,11 @@ body .options .option .label .info .main {
   font-size: 1.2rem; }
 
 body .options .option .label .info .sub {
-  transition-delay: 0.1s; }
-
-/*******************************************************************************************************************/
-/****************image champion géo*********************/
-/********************images champion anemo *********************/
-.champion-anemo1 {
-  background-image: url("../../ressources/Character_Jean_Thumb.png");
-  background-size: cover;
-  background-repeat: no-repeat; }
-
-.champion-anemo2 {
-  background-image: url("../../ressources/Character_Kaedehara_Kazuha_Thumb.png");
-  background-size: cover;
-  background-repeat: no-repeat; }
-
-.champion-anemo3 {
-  background-image: url("../../ressources/Character_Sayu_Thumb.png");
-  background-size: cover;
-  background-repeat: no-repeat; }
-
-.champion-anemo4 {
-  background-image: url("../../ressources/Character_Shikanoin_Heizou_Thumb.png");
-  background-size: cover;
-  background-repeat: no-repeat; }
-
-.champion-anemo5 {
-  background-image: url("../../ressources/Character_Sucrose_Thumb.png");
-  background-size: cover;
-  background-repeat: no-repeat; }
-
-.champion-anemo6 {
-  background-image: url("../../ressources/travelers-aether-and-lumine_png_1640.png");
-  background-size: cover;
-  background-repeat: no-repeat; }
-
-.champion-anemo7 {
-  background-image: url("../../ressources/Character_Venti_Thumb.png");
-  background-size: cover;
-  background-repeat: no-repeat; }
-
-.champion-anemo8 {
-  background-image: url("../../ressources/Character_Xiao_Thumb.png");
-  background-size: cover;
-  background-repeat: no-repeat; }
-
-.champion-cryo1 {
-  background-image: url("../../ressources/Character_Aloy_Thumb.png");
-  background-size: cover;
-  background-repeat: no-repeat; }
-
-.champion-cryo2 {
-  background-image: url("../../ressources/Character_Chongyun_Thumb.png");
-  background-size: cover;
-  background-repeat: no-repeat; }
-
-.champion-cryo3 {
-  background-image: url("../../ressources/Character_Diona_Thumb.png");
-  background-size: cover;
-  background-repeat: no-repeat; }
-
-.champion-cryo4 {
-  background-image: url("../../ressources/Character_Eula_Thumb.png");
-  background-size: cover;
-  background-repeat: no-repeat; }
-
-.champion-cryo5 {
-  background-image: url("../../ressources/Character_Ganyu_Thumb.png");
-  background-size: cover;
-  background-repeat: no-repeat; }
-
-.champion-cryo6 {
-  background-image: url("../../ressources/Character_Kaeya_Thumb.png");
-  background-size: cover;
-  background-repeat: no-repeat; }
-
-.champion-cryo7 {
-  background-image: url("../../ressources/Character_Kamisato_Ayaka_Thumb.png");
-  background-size: cover;
-  background-repeat: no-repeat; }
-
-.champion-cryo8 {
-  background-image: url("../../ressources/Character_Qiqi_Thumb.png");
-  background-size: cover;
-  background-repeat: no-repeat; }
-
-.champion-cryo9 {
-  background-image: url("../../ressources/Character_Rosaria_Thumb.png");
-  background-size: cover;
-  background-repeat: no-repeat; }
-
-.champion-cryo10 {
-  background-image: url("../../ressources/Character_Shenhe_Thumb.png");
-  background-size: cover;
-  background-repeat: no-repeat; }
-
-.champion-electro1 {
-  background-image: url("../../ressources/Character_Beidou_Thumb.png");
-  background-size: cover;
-  background-repeat: no-repeat; }
-
-.champion-electro2 {
-  background-image: url("../../ressources/Character_Fischl_Thumb.png");
-  background-size: cover;
-  background-repeat: no-repeat; }
-
-.champion-electro3 {
-  background-image: url("../../ressources/Character_Keqing_Thumb.png");
-  background-size: cover;
-  background-repeat: no-repeat; }
-
-.champion-electro4 {
-  background-image: url("../../ressources/Character_Kujou_Sara_Thumb.png");
-  background-size: cover;
-  background-repeat: no-repeat; }
-
-.champion-electro5 {
-  background-image: url("../../ressources/Character_Kuki_Shinobu_Thumb.png");
-  background-size: cover;
-  background-repeat: no-repeat; }
-
-.champion-electro6 {
-  background-image: url("../../ressources/Character_Lisa_Thumb.png");
-  background-size: cover;
-  background-repeat: no-repeat; }
-
-.champion-electro7 {
-  background-image: url("../../ressources/Character_Raiden_Shogun_Thumb.png");
-  background-size: cover;
-  background-repeat: no-repeat; }
-
-.champion-electro8 {
-  background-image: url("../../ressources/Character_Razor_Thumb.png");
-  background-size: cover;
-  background-repeat: no-repeat; }
-
-.champion-electro9 {
-  background-image: url("../../ressources/travelers-aether-and-lumine_png_1640.png");
-  background-size: cover;
-  background-repeat: no-repeat; }
-
-.champion-electro10 {
-  background-image: url("../../ressources/Character_Yae_Miko_Thumb.png");
-  background-size: cover;
-  background-repeat: no-repeat; }
-
-.champion-hydro1 {
-  background-image: url("../../ressources/Character_Barbara_Thumb.png");
-  background-size: cover;
-  background-repeat: no-repeat; }
-
-.champion-hydro2 {
-  background-image: url("../../ressources/Character_Kamisato_Ayato_Thumb.png");
-  background-size: cover;
-  background-repeat: no-repeat; }
-
-.champion-hydro3 {
-  background-image: url("../../ressources/Character_Mona_Thumb.png");
-  background-size: cover;
-  background-repeat: no-repeat; }
-
-.champion-hydro4 {
-  background-image: url("../../ressources/Character_Sangonomiya_Kokomi_Thumb.png");
-  background-size: cover;
-  background-repeat: no-repeat; }
-
-.champion-hydro5 {
-  background-image: url("../../ressources/Character_Tartaglia_Thumb.png");
-  background-size: cover;
-  background-repeat: no-repeat; }
-
-.champion-hydro6 {
-  background-image: url("../../ressources/Character_Xingqiu_Thumb.png");
-  background-size: cover;
-  background-repeat: no-repeat; }
-
-.champion-hydro7 {
-  background-image: url("../../ressources/Character_Yelan_Thumb.png");
-  background-size: cover;
-  background-repeat: no-repeat; }
-
-.champion-pyro1 {
-  background-image: url("../../ressources/Character_Amber_Thumb.png");
-  background-size: cover;
-  background-repeat: no-repeat; }
-
-.champion-pyro2 {
-  background-image: url("../../ressources/Character_Bennett_Thumb.png");
-  background-size: cover;
-  background-repeat: no-repeat; }
-
-.champion-pyro3 {
-  background-image: url("../../ressources/Character_Diluc_Thumb.png");
-  background-size: cover;
-  background-repeat: no-repeat; }
-
-.champion-pyro4 {
-  background-image: url("../../ressources/Character_Hu_Tao_Thumb.png");
-  background-size: cover;
-  background-repeat: no-repeat; }
-
-.champion-pyro5 {
-  background-image: url("../../ressources/Character_Klee_Thumb.png");
-  background-size: cover;
-  background-repeat: no-repeat; }
-
-.champion-pyro6 {
-  background-image: url("../../ressources/Character_Thoma_Thumb.png");
-  background-size: cover;
-  background-repeat: no-repeat; }
-
-.champion-pyro7 {
-  background-image: url("../../ressources/Character_Xiangling_Thumb.png");
-  background-size: cover;
-  background-repeat: no-repeat; }
-
-.champion-pyro8 {
-  background-image: url("../../ressources/Character_Xinyan_Thumb.png");
-  background-size: cover;
-  background-repeat: no-repeat; }
-
-.champion-pyro9 {
-  background-image: url("../../ressources/Character_Yanfei_Thumb.png");
-  background-size: cover;
-  background-repeat: no-repeat; }
-
-.champion-pyro10 {
-  background-image: url("../../ressources/Character_Yoimiya_Thumb.png");
-  background-size: cover;
-  background-repeat: no-repeat; }
+  transition-delay: 0.1s;
+  position: relative;
+  bottom: 50%;
+  font-size: 1.2rem;
+  font-weight: bold; }
 
 .build_disclaimer {
   color: white;
