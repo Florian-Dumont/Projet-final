@@ -49,7 +49,7 @@ class PageManager
         $messages = $query->fetchAll(PDO::FETCH_ASSOC);
         return $messages;
     }
-    function getAllMessagesByBuildId(string $channel_id, $db) : ?array{
+    function getAllMessagesByBuildId(string $build_id, $db) : ?array{
         $query = $db->prepare('SELECT text FROM comments WHERE build_id=:build_id');
         $parameters = [
         'build_id' => $build_id
