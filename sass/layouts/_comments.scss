@@ -1,10 +1,40 @@
+/***********input ecrire un commentaire***********************/
+.comments-title{
+        padding:1px 0 1px 0;
+       text-shadow:1px 1px black;
+        position:relative;
+        left:12%;
+        bottom:1%;
+        color:white;
+        text-align:center;
+        border: 1px solid white;
+        
+        
+}
+.comments{
+        margin-top:1em;
+        width:800px;
+        max-width:900px;
+        display:block;
+        position:relative;
+        left:12%;
+        .comments_box{
+                border-style:none;
+                border-radius:50px;
+        }
+        .submit{
+                margin-top:0.3em;
+        }
+}
+
+/*****************************commentaire deja ecrit************************/
 .comments_zone{
         color:white;
         border: 1px solid white;
         margin:1em;
         position:relative;
-        width:100%;
-        left:9%;
+        width:auto;
+        left:12%;
         padding-left:1em;
         u{
           font-size:1.2em;      

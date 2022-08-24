@@ -12,12 +12,13 @@ window.addEventListener("DOMContentLoaded", (event) => {
    
    
   });
-  const element = document.getElementByClassName('css-6kluu6');
-   element.style.display = "none";
+  const element = document.getElementsByClassName('css-6kluu6').style.display = "none";
+//    element.style['display'] = "none";
+   document.getElementsByClassName('.css-6kluu6').hidden = true;
+
+console.log(element);
 
 
 
-
-console.log("hello");
 
 // css-6kluu6

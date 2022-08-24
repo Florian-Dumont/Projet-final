@@ -29,6 +29,7 @@
   right:20px;
   
   
+  
 }
 @media screen and (max-width: 718px) {
   body .options {
@@ -85,6 +86,7 @@ body .options .option.active {
   background-size: auto 100%;
   &:active {
     transform:scale(1);
+    
   }
 }
 body .options .option.active .shadow {

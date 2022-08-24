@@ -8,7 +8,7 @@ body {
   transition: 0.25s; }
 
 header {
-  width: 100%;
+  width: 100vw;
   text-align: center;
   align-items: center;
   display: block;
@@ -45,6 +45,7 @@ header {
     width: 100%; }
   header .header_logo {
     /*logo seul*/
+    position: relative;
     text-align: center;
     font-size: 2rem; }
   header .under_logo .sociaux {
@@ -515,6 +516,7 @@ body .options .option .label .info .sub {
   width: 800px;
   height: 800px; }
 
+/***********input ecrire un commentaire***********************/
 .comments-title {
   padding: 1px 0 1px 0;
   text-shadow: 1px 1px black;
@@ -527,23 +529,25 @@ body .options .option .label .info .sub {
 
 .comments {
   margin-top: 1em;
-  max-width: 800px;
+  width: 800px;
+  max-width: 900px;
   display: block;
   position: relative;
   left: 12%; }
   .comments .comments_box {
     border-style: none;
-    border-radius: 20px; }
+    border-radius: 50px; }
   .comments .submit {
     margin-top: 0.3em; }
 
+/*****************************commentaire deja ecrit************************/
 .comments_zone {
   color: white;
   border: 1px solid white;
   margin: 1em;
   position: relative;
-  width: 100%;
-  left: 9%;
+  width: auto;
+  left: 12%;
   padding-left: 1em; }
   .comments_zone u {
     font-size: 1.2em; }
