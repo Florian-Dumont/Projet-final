@@ -3,11 +3,7 @@
 <?php session_start();?>
 <?php require "../classes/db_connect.php"?>
 <?php require_once "./uploads/fileUploader.php";
-/*try{
-    // $pdo = new PDO("n'importe quoi !");
-} catch(Exception $e){
-    echo $e->getMessage();
-}*/
+
 ?>
 
 <?php 

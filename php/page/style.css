@@ -369,9 +369,13 @@ a.css-6kluu6 {
   align-items: stretch;
   overflow: hidden;
   min-width: 900px;
-  max-width: 1200px;
-  width: calc(100% - 100px);
-  height: 400px; }
+  max-width: 100%;
+  width: 1600px;
+  height: 600px; }
+
+.options .option:not(.active) .face {
+  position: relative;
+  right: 20px; }
 
 @media screen and (max-width: 718px) {
   body .options {
@@ -400,7 +404,7 @@ a.css-6kluu6 {
 body .options .option {
   position: relative;
   overflow: hidden;
-  min-width: 60px;
+  min-width: 10px;
   margin: 10px;
   background-size: auto 100%;
   background-position: center;
@@ -430,8 +434,9 @@ body .options .option.active .label .info > div {
   opacity: 1; }
 
 body .options .option:not(.active) {
-  flex-grow: 1;
-  border-radius: 30px; }
+  flex-grow: 2;
+  border-radius: 30px;
+  width: 400px; }
 
 body .options .option:not(.active) .shadow {
   bottom: -40px;
@@ -477,7 +482,7 @@ body .options .option .label .info {
   margin-left: 10px;
   color: white;
   white-space: pre;
-  text-shadow: 1px 3px black; }
+  text-shadow: 3px 3px black; }
 
 body .options .option .label .info > div {
   position: relative;
@@ -495,9 +500,11 @@ body .options .option .label .info .sub {
   font-weight: bold; }
 
 .build_disclaimer {
+  display: flex;
   color: white;
   font-size: 1.5em;
   font-style: bold;
+  justify-content: center;
   position: relative;
   left: 25%;
   width: 910px; }
@@ -505,11 +512,8 @@ body .options .option .label .info .sub {
 .build_layout {
   position: relative;
   left: 12%;
-  size: 0.7em;
   width: 800px;
-  height: 800px;
-  background-size: cover;
-  background-repeat: no-repeat; }
+  height: 800px; }
 
 .comments-title {
   padding: 1px 0 1px 0;
@@ -549,5 +553,16 @@ body .options .option .label .info .sub {
   .comments_zone .msger {
     padding-left: 1em;
     font-size: 1.1em; }
+
+.comment_unlog {
+  display: flex;
+  justify-content: center;
+  position: relative;
+  left: 12%;
+  margin: 1em;
+  padding: 1em;
+  color: white;
+  font-size: 1.2em;
+  border: 1px solid white; }
 
 /*# sourceMappingURL=style.css.map */

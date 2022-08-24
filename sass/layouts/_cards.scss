@@ -12,6 +12,7 @@
   align-items: center;
   margin-top: 50px;
   
+  
 }
 .options {
   display: flex;
@@ -19,9 +20,15 @@
   align-items: stretch;
   overflow: hidden;
   min-width: 900px;
-  max-width: 1200px;
-  width: calc(100% - 100px);
-  height: 400px;
+  max-width: 100%;
+  width: 1600px;
+  height: 600px;
+}
+.options .option:not(.active) .face {
+  position:relative;
+  right:20px;
+  
+  
 }
 @media screen and (max-width: 718px) {
   body .options {
@@ -58,7 +65,8 @@
 body .options .option {
   position: relative;
   overflow: hidden;
-  min-width: 60px;
+  min-width: 10px;
+  
   margin: 10px;
   background-size: auto 100%;
   background-position: center;
@@ -90,9 +98,14 @@ body .options .option.active .label .info > div {
   left: 0px;
   opacity: 1;
 }
-body .options .option:not(.active) {
-  flex-grow: 1;
+body .options .option:not(.active)  {
+  flex-grow: 2;
   border-radius: 30px;
+  width:400px;
+  
+  
+  
+  
 }
 body .options .option:not(.active) .shadow {
   bottom: -40px;
@@ -139,7 +152,7 @@ body .options .option .label .info {
   margin-left: 10px;
   color: white;
   white-space: pre;
-  text-shadow: 1px 3px black;
+  text-shadow: 3px 3px black;
   
   
 }

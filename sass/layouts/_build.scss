@@ -1,7 +1,9 @@
 .build_disclaimer{
+        display:flex;
         color:white;
         font-size:1.5em;
         font-style:bold;
+        justify-content:center;
         position:relative;
         left:25%;
         width:910px;
@@ -9,15 +11,15 @@
 
 
 .build_layout{
+        // display:flex;
         position:relative;
         left:12%;
-        size:0.7em;
+        
         
         width:800px;
         height:800px;
         // background-image: url("../../ressources/Itto-build.png");
-        background-size: cover;
-        background-repeat:no-repeat;
+       
 }
 .comments-title{
         padding:1px 0 1px 0;
