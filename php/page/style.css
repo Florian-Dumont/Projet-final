@@ -132,7 +132,8 @@ a.css-6kluu6 {
   align-items: center;
   text-align: center;
   justify-content: center;
-  font-size: 0.5rem; }
+  font-size: 0.5rem;
+  margin-bottom: 1em; }
 
 .nav_anemo {
   height: 50px;
@@ -577,9 +578,15 @@ body .options .option .label .info .sub {
     font-size: 1.2em; }
 
 /***************** tableau user *****************/
-.user_admin {
+a.user_admin {
+  position: relative;
+  top: 1em;
   text-decoration: none;
-  color: white; }
+  color: white;
+  padding: 0.5em;
+  margin: 2em;
+  border: 1px solid white;
+  border-radius: 20px; }
 
 table {
   text-decoration: none;

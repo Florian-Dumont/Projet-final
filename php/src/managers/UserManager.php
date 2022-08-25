@@ -1,7 +1,11 @@
 <?php
 class Usermanager{
-        public function getAllNonAdminUsers() : ?array
+        
+        
+        public function getUsers() : ?array
         {
+    
+            
                 $ddb = new Dbconnect();
                 
                 $sql = "SELECT * FROM users";

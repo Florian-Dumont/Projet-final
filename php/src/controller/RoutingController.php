@@ -66,7 +66,7 @@ class RoutingController
             $authenticationController = new AuthenticationController();
             $authenticationController->admin($post);
         }
-        else if ($route === "adminUser")
+        else if ($route === "adminUser"){
         
         $authenticationController = new AuthenticationController();
         $authenticationController->adminUser($post);
@@ -77,7 +77,7 @@ class RoutingController
             <img src='../../ressources/Ganyu404.png' alt=' émoticone de ganyu troublé'></h1>";
         }
         
-    
+    }
     public function matchRoute(string $route = "homepage", array $get, array $post = null) : void
     {
         $existingRoutes = $this->pageManager->getAllPagesSlugs();

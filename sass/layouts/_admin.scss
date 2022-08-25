@@ -69,9 +69,15 @@
   }
 }
 /***************** tableau user *****************/
-.user_admin{
+a.user_admin{
+        position:relative;
+        top:1em;
         text-decoration:none;
         color:white;
+        padding:0.5em;
+        margin:2em;
+        border: 1px solid white;
+        border-radius: 20px;
 }
 table{
         text-decoration:none;

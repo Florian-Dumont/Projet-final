@@ -10,9 +10,9 @@
     </thead>
     <tbody>
 <?php
-require "../src/managers/userManager.php";
+require "../src/managers/UserManager.php";
 $userManager = new UserManager();
-$userArray= $userManager->getAllNonAdminUsers();
+$userArray= $userManager->getUsers();
 
 for($i=0,$max=count($userArray);$i<$max;$i++){
 ?>
