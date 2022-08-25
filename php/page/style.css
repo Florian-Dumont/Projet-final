@@ -108,7 +108,7 @@ a.css-6kluu6 {
   background-image: url("../../ressources/GenshinImpact_Multi_Jaquette_001.png");
   background-size: cover;
   background-position: 50% 50%;
-  width: 400px;
+  width: 350px;
   height: 550px;
   display: flex;
   border-radius: 20px;
@@ -512,16 +512,16 @@ body .options .option .label .info .sub {
 
 .build_layout {
   position: relative;
-  left: 12%;
-  width: 800px;
-  height: 800px; }
+  left: 18%;
+  width: 900px;
+  height: 900px; }
 
 /***********input ecrire un commentaire***********************/
 .comments-title {
   padding: 1px 0 1px 0;
   text-shadow: 1px 1px black;
   position: relative;
-  left: 12%;
+  left: 19%;
   bottom: 1%;
   color: white;
   text-align: center;
@@ -529,11 +529,11 @@ body .options .option .label .info .sub {
 
 .comments {
   margin-top: 1em;
-  width: 800px;
+  width: 90%;
   max-width: 900px;
   display: block;
   position: relative;
-  left: 12%; }
+  left: 19%; }
   .comments .comments_box {
     border-style: none;
     border-radius: 50px; }
@@ -547,7 +547,7 @@ body .options .option .label .info .sub {
   margin: 1em;
   position: relative;
   width: auto;
-  left: 12%;
+  left: 19%;
   padding-left: 1em; }
   .comments_zone u {
     font-size: 1.2em; }
@@ -568,5 +568,12 @@ body .options .option .label .info .sub {
   color: white;
   font-size: 1.2em;
   border: 1px solid white; }
+
+.admin_delete {
+  text-decoration: none;
+  color: red;
+  position: relative;
+  left: 75%;
+  bottom: 6em; }
 
 /*# sourceMappingURL=style.css.map */

@@ -59,21 +59,5 @@ class PageManager
         return $messages;
     }
     //Fonction permettant de créer un nouveau message
-    function addNewMessage(string $text, string $build_id, $db){
-        //préparation des données à insérer dans la table message
-        
-        $author=$username;
-        date_default_timezone_set('CET');
-        $date_submitted = date('Y-m-d G:i:s');
     
-    
-        $query = $db->prepare("INSERT INTO comments (build_ID, text, user_ID, submited_date) VALUES (:build_id,:text,:author,:submited_date)");
-        $parameters = [
-        'build_id' => $characterId,
-        'text' => $text,
-        'author' => $author,
-        'submited_date' => $date_submitted
-        ];
-        $query->execute($parameters);
-    }
 }
