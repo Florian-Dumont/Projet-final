@@ -1,0 +1,35 @@
+<table>
+
+    <thead>
+        <tr>
+            <th>Pseudonyme</th>
+            <th>email</th>
+            <th>Role (1 = admin / 0 = non-admin)</th>
+            <th>Suppression</th>
+        </tr>
+    </thead>
+    <tbody>
+<?php
+require "../src/managers/userManager.php";
+$userManager = new UserManager();
+$userArray= $userManager->getAllNonAdminUsers();
+
+for($i=0,$max=count($userArray);$i<$max;$i++){
+?>
+        <tr>
+            <td><?=$userArray[$i]['name']?></td>
+            <td><?=$userArray[$i]['email']?></td>
+            <td><?=$userArray[$i]['is_admin']?></td>
+            <td>
+                <form action="" method="post">
+                <input type="hidden" name="userId" value=<?=$userArray[$i]['ID']?>>
+                <button type="submit" class="deletebtn">Supprimer l'utilisateur</button>
+                </form>
+            </td>
+        </tr>
+
+<?php
+}
+?>
+    </tbody>
+</table>

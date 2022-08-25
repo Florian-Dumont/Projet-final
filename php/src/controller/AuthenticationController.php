@@ -54,7 +54,17 @@ class AuthenticationController
         echo "<h1 class='notfound'>Loupé , la page n'existe pas !</br> 
             <img src='../../ressources/Ganyu404.png' alt=' émoticone de ganyu troublé'></h1>";
         }
-    }    
+    }
+    function adminUser() : void
+    {
+        if($_SESSION['user']['is_admin']==1){ 
+        require "../page/adminUser.phtml";
+        } 
+        else{
+        echo "<h1 class='notfound'>Loupé , la page n'existe pas !</br> 
+            <img src='../../ressources/Ganyu404.png' alt=' émoticone de ganyu troublé'></h1>";
+        }
+    }
 
     
 }

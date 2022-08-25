@@ -66,13 +66,17 @@ class RoutingController
             $authenticationController = new AuthenticationController();
             $authenticationController->admin($post);
         }
+        else if ($route === "adminUser")
         
+        $authenticationController = new AuthenticationController();
+        $authenticationController->adminUser($post);
+        }
         else
         {
             echo "<h1 class='notfound'>Loupé , la page n'existe pas !</br> 
             <img src='../../ressources/Ganyu404.png' alt=' émoticone de ganyu troublé'></h1>";
         }
-    }
+        
     
     public function matchRoute(string $route = "homepage", array $get, array $post = null) : void
     {

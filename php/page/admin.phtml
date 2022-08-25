@@ -4,6 +4,7 @@
 
 
 require "adminForm.phtml";
+require "../src/managers/usermanager.php"
 
 if(isset($_POST["submit"]))
 {
@@ -27,7 +28,7 @@ if(isset($_POST["submit"]))
         
     </head>
     <body>
-        
+        <a class="user_admin" href="adminUser.phtml"> Gestion des utilisateurs</a>
         
         <form class="admin-form" action="" method="post" enctype="multipart/form-data">
             <fieldset>
