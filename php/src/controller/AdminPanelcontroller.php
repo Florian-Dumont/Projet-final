@@ -7,6 +7,7 @@ class AdminPanelController
         {
                     if(isset($_SESSION) && $_SESSION['user']['is_admin']==1)
                     {
+                            
                         echo "Admin connecté !";
                         // If the admin came from a form, it means that he wanted to delete a user
                         if(!empty($_POST)){

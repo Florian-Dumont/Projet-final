@@ -14,9 +14,9 @@ require "../src/managers/UserManager.php";
 $userManager = new UserManager();
 $userArray= $userManager->getUsers();
 
-// require "../src/controller/AdminPanelController.php";
-// $manageUser = new AdminPanelController();
-// $deleteuser = $manageuser->manageUser();
+require "../src/controller/AdminPanelcontroller.php";
+$manageUser = new AdminPanelController();
+$deleteuser = $manageUser->manageUser();
 
 var_dump($userArray);
 var_dump($_POST);
