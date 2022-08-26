@@ -81,8 +81,27 @@ a.user_admin{
 }
 table{
         text-decoration:none;
+        width:99vw;
+        height:auto;
+        text-align:center;
         border: 1px solid white;
+        margin-top:2em;
         thead{
                 border: 1px solid white;
         }
+        tr{
+                color:white;
+        }
+        tr:hover{
+                color:red;
+        }
+        .hover_white:hover{
+                color:white;
+        }
+        .deletebtn:hover{
+                background-color: red;
+               
+        }
+        
+        
 }

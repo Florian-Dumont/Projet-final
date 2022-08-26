@@ -1,9 +1,9 @@
 <table>
 
     <thead>
-        <tr>
+        <tr class="hover_white">
             <th>Pseudonyme</th>
-            <th>email</th>
+            <th>Email</th>
             <th>Role (1 = admin / 0 = non-admin)</th>
             <th>Suppression</th>
         </tr>
@@ -14,6 +14,12 @@ require "../src/managers/UserManager.php";
 $userManager = new UserManager();
 $userArray= $userManager->getUsers();
 
+// require "../src/controller/AdminPanelController.php";
+// $manageUser = new AdminPanelController();
+// $deleteuser = $manageuser->manageUser();
+
+var_dump($userArray);
+var_dump($_POST);
 for($i=0,$max=count($userArray);$i<$max;$i++){
 ?>
         <tr>
@@ -29,6 +35,7 @@ for($i=0,$max=count($userArray);$i<$max;$i++){
         </tr>
 
 <?php
+
 }
 ?>
     </tbody>

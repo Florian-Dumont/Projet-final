@@ -590,8 +590,20 @@ a.user_admin {
 
 table {
   text-decoration: none;
-  border: 1px solid white; }
+  width: 99vw;
+  height: auto;
+  text-align: center;
+  border: 1px solid white;
+  margin-top: 2em; }
   table thead {
     border: 1px solid white; }
+  table tr {
+    color: white; }
+  table tr:hover {
+    color: red; }
+  table .hover_white:hover {
+    color: white; }
+  table .deletebtn:hover {
+    background-color: red; }
 
 /*# sourceMappingURL=style.css.map */

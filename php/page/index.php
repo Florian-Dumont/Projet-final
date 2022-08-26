@@ -3,7 +3,7 @@
 <?php session_start();?>
 <?php require "../classes/db_connect.php"?>
 <?php require_once "./uploads/fileUploader.php";
-
+ 
 ?>
 
 <?php 

@@ -1,12 +1,14 @@
 <?php
+require_once "../../php/classes/db_connect.php";
 class Usermanager{
         
         
         public function getUsers() : ?array
         {
-    
+                
             
                 $ddb = new Dbconnect();
+               
                 
                 $sql = "SELECT * FROM users";
                 $query = $ddb->db->prepare($sql);
@@ -23,6 +25,8 @@ class Usermanager{
                 $query = $ddb->db->prepare($sql);
                 $query->bindValue(":id", $userId);
                 $query->execute();
+                
+                
         }
         
 }
