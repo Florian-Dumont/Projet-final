@@ -1,4 +1,6 @@
 <?php
+require "../src/managers/UserManager.php";
+
 
 class AdminPanelController
 {

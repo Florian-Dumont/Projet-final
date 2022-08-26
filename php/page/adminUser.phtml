@@ -10,16 +10,21 @@
     </thead>
     <tbody>
 <?php
+
 require "../src/managers/UserManager.php";
 $userManager = new UserManager();
+
+
+if(isset($_POST["userId"])){
+    $userManager->deleteUserById($_POST['userId']);
+}
+    
 $userArray= $userManager->getUsers();
 
-require "../src/controller/AdminPanelcontroller.php";
-$manageUser = new AdminPanelController();
-$deleteuser = $manageUser->manageUser();
 
-var_dump($userArray);
-var_dump($_POST);
+
+
+
 for($i=0,$max=count($userArray);$i<$max;$i++){
 ?>
         <tr>
