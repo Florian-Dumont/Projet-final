@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="fr">
+<?php
+$buildManager = new BuildManager();
+$build=$buildManager->getAllBuilds();
+
+for($i=0,$max=count($builds);$i<$max;$i++){
+        $characterId = $builds[$i]['ID'];
+        $charactername = $character['name'];
+?>
+
+
+
+
+        <head>
+                
+        </head>
+                <body>
+                        
+                        <form class="admin-form" action="" methode="post" enctype="multipart/form-data">
+                                <fieldset>
+                                        <select name="build" id="build">
+                                                <option value=<?=$characterId?> > <?=$charactername?> </option>
+                                        </select>
+                                </fieldset>
+                                
+                                <fieldset>
+                                        <label for="updateBuild">Nouvelle image </label>
+                                        <input type="file" name="updateBuild"/>
+                                        <input type="submit" value="Remplacer le build"/> 
+                                </fieldset>
+                                
+                        </form>
+                        
+                        
+                        
+                </body>
+<?php
+
+}
+?>               
+</html>

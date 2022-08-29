@@ -55,6 +55,10 @@ class AuthenticationController
             <img src='../../ressources/Ganyu404.png' alt=' émoticone de ganyu troublé'></h1>";
         }
     }
+    function adminUpdate() : void
+    {
+        require '../page/adminUpdate.phtml';
+    }
     function adminUser() : void
     {
         if($_SESSION['user']['is_admin']==1){ 

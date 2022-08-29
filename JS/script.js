@@ -12,9 +12,14 @@ window.addEventListener("DOMContentLoaded", (event) => {
    
    
   });
-  const element = document.getElementsByClassName('css-6kluu6').style.display = "none";
+//  const element = document.getElementsByClassName('.css-lgbo0i').remove();
+const element = document.querySelector("span.css-lgbo0i")
+element.a.removeChild(element);
 //    element.style['display'] = "none";
-   document.getElementsByClassName('.css-6kluu6').hidden = true;
+   // document.getElementsByClassName('.css-6kluu6').hidden = true;
+   
+   // element.removeAttribute("style");
+   element.style.width = 0;
 
 console.log(element);
 
