@@ -18,7 +18,7 @@ class Buildmanager{
         $imageUrl = $image['image_url'];
         
         return $imageUrl;
-        var_dump($image);
+        
     }
     public function getAllBuilds() : ?array
     {
@@ -33,7 +33,7 @@ class Buildmanager{
         $builds = $query->fetchAll(PDO::FETCH_ASSOC);
         
         
-        var_dump($builds);
+        
         
         return $builds;
     }

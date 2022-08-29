@@ -5,20 +5,11 @@ require "../src/managers/Buildmanager.php";
 $buildManager = new BuildManager();
 $build=$buildManager->getAllBuilds();
 
+// $editbuild = $buildManager->editBuildByBuildId($_POST['image_URL']);
 
-if(isset($_POST["ID"])){
-    $userManager->editBuildByBuildId($_POST['buildId']);
-}
 
 var_dump($_POST);
 ?>
-
-
-
-
-
-
-
 <head>
                 
 </head>
