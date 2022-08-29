@@ -1,29 +1,49 @@
 <!doctype html>
 <html lang="fr">
 <?php
+require "../src/managers/Buildmanager.php";
 $buildManager = new BuildManager();
 $build=$buildManager->getAllBuilds();
 
-for($i=0,$max=count($builds);$i<$max;$i++){
-        $characterId = $builds[$i]['ID'];
-        $charactername = $character['name'];
+
+if(isset($_POST["ID"])){
+    $userManager->editBuildByBuildId($_POST['buildId']);
+}
+
+var_dump($_POST);
 ?>
 
 
 
 
-        <head>
+
+
+
+<head>
                 
-        </head>
-                <body>
+</head>
+        <body>
                         
-                        <form class="admin-form" action="" methode="post" enctype="multipart/form-data">
-                                <fieldset>
-                                        <select name="build" id="build">
-                                                <option value=<?=$characterId?> > <?=$charactername?> </option>
+                <form class="admin-form" action="" methode="post" enctype="multipart/form-data">
+                        <fieldset>
+                                <select name="build" id="build">
+                                                
+                                                
+<?php                                                
+for($i=0,$max=count($build);$i<$max;$i++){
+$characterId = $build[$i]['ID'];
+$charactername = $build[$i]['image_URL'];
+?>       
+                                                
+                                               
+                                        <option value = <?=$characterId?>>
+                                        <?=$charactername?> </option>
+<?php
+}
+?> 
                                         </select>
                                 </fieldset>
-                                
+
                                 <fieldset>
                                         <label for="updateBuild">Nouvelle image </label>
                                         <input type="file" name="updateBuild"/>
@@ -35,8 +55,5 @@ for($i=0,$max=count($builds);$i<$max;$i++){
                         
                         
                 </body>
-<?php
-
-}
-?>               
+              
 </html>

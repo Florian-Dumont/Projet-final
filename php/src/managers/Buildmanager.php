@@ -20,28 +20,32 @@ class Buildmanager{
         return $imageUrl;
         var_dump($image);
     }
-    public function getAllBuild
+    public function getAllBuilds() : ?array
     {
         $ddb = new Dbconnect();
         
-        $sql = "SELECT ID FROM builds";
+        $sql = "SELECT ID, image_URL FROM builds";
         
-        $query = $ddb->db=>prepare($sql);
+        $query = $ddb->db->prepare($sql);
         
         $query->execute();
         
-        $build = $query->fetchAll(PDO::FETCH_ASSOC);
-        $buils = $build['image_url'];
+        $builds = $query->fetchAll(PDO::FETCH_ASSOC);
+        
+        
+        var_dump($builds);
+        
+        return $builds;
     }
     
-    public function editbuildBycCharacterId(int $characterId) : ?string
+    public function editBuildByBuildId(int $buildId) : ?string
     {
         $ddb = new Dbconnect();
         
-        $sql ="UPDATE image_url FROM builds Where character_id=:character_id";
+        $sql ="UPDATE image_url FROM builds Where build_id=:build_id";
         
         $query = $ddb->db->prepare($sql);
-        $query->bindvalue(":character_id", $characterId);
+        $query->bindvalue(":build_id", $buildId);
         $query->execute();
         
         $image = $query->fetch(PDO::FETCH_ASSOC);
