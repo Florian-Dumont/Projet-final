@@ -1,0 +1,50 @@
+@media only screen and (min-device-width : 320px) and (max-device-width : 480px) {
+body{
+        width:100%;
+}
+header{
+        text-align:initial;
+}
+.header_logo{
+        max-width:100%;
+}
+.nav_element p{
+        display:none;
+}
+.admin-panel{
+        color:white;
+    }
+    .log-in{                 
+    color:white;
+    width:40px;
+    text-decoration:none;
+    }
+    .log-out{
+        text-decoration:none;
+        color:white;
+    }
+.sociaux-timeline{
+        align-items:center;
+        display:block;
+        justify-content:initial;
+        margin: 20px;
+        padding: 0;
+        .twitter-timeline{
+                width:80%;
+        }
+        .interactive-map{
+                width:100%;
+                margin:0;
+                margin-top:20px;
+        }
+        .insta-timeline{
+                
+        }
+        .gensh-event{
+                margin: 0;
+                
+        }
+}     
+
+
+}

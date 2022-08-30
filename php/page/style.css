@@ -42,7 +42,7 @@ header {
     flex: 1; }
   header header .logo {
     /*header + logo*/
-    width: 100%; }
+    width: 100vw; }
   header .header_logo {
     /*logo seul*/
     position: relative;
@@ -102,12 +102,12 @@ header {
 
 span.css-lgbo0i {
   display: inherit;
-  display: none !important;
+  display: none;
   background-color: red; }
 
 .hidden_degeu {
   height: 40px;
-  width: 350px;
+  width: 100%;
   position: relative;
   top: -3em;
   background-image: url("../../ressources/No_elem_template.png"); }
@@ -632,5 +632,45 @@ table {
   margin: 2em;
   border: 1px solid white;
   border-radius: 20px; }
+
+@media only screen and (min-device-width: 320px) and (max-device-width: 480px) {
+  body {
+    width: 100%; }
+
+  header {
+    text-align: initial; }
+
+  .header_logo {
+    max-width: 100%; }
+
+  .nav_element p {
+    display: none; }
+
+  .admin-panel {
+    color: white; }
+
+  .log-in {
+    color: white;
+    width: 40px;
+    text-decoration: none; }
+
+  .log-out {
+    text-decoration: none;
+    color: white; }
+
+  .sociaux-timeline {
+    align-items: center;
+    display: block;
+    justify-content: initial;
+    margin: 20px;
+    padding: 0; }
+    .sociaux-timeline .twitter-timeline {
+      width: 80%; }
+    .sociaux-timeline .interactive-map {
+      width: 100%;
+      margin: 0;
+      margin-top: 20px; }
+    .sociaux-timeline .gensh-event {
+      margin: 0; } }
 
 /*# sourceMappingURL=style.css.map */
