@@ -3,7 +3,7 @@
         padding:1px 0 1px 0;
        text-shadow:1px 1px black;
         position:relative;
-        left:19%;
+        left:15%;
         bottom:1%;
         color:white;
         text-align:center;
@@ -17,10 +17,11 @@
         max-width:900px;
         display:block;
         position:relative;
-        left:19%;
-        .comments_box{
+        left:14%;
+        #comments_box{
+                width:900px;
                 border-style:none;
-                border-radius:50px;
+                border-radius:10px;
         }
         .submit{
                 margin-top:0.3em;
@@ -34,7 +35,7 @@
         margin:1em;
         position:relative;
         width:auto;
-        left:19%;
+        left:14%;
         padding-left:1em;
         u{
           font-size:1.2em;      
