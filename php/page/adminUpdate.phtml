@@ -5,7 +5,7 @@ require "../src/managers/Buildmanager.php";
 $buildManager = new BuildManager();
 $build=$buildManager->getAllBuilds();
 
-// $editbuild = $buildManager->editBuildByBuildId($_POST['image_URL']);
+$editbuild = $buildManager->editBuildByBuildId($_POST['image_URL']);
 
 
 var_dump($_POST);
@@ -15,7 +15,7 @@ var_dump($_POST);
 </head>
         <body>
                         
-                <form class="admin-form" action="" methode="post" enctype="multipart/form-data">
+                <form class="admin-form" action="index.php?route=adminUpdate" method="post" enctype="multipart/form-data">
                         <fieldset>
                                 <select name="build" id="build">
                                                 
@@ -37,6 +37,7 @@ $charactername = $build[$i]['image_URL'];
 
                                 <fieldset>
                                         <label for="updateBuild">Nouvelle image </label>
+                                        
                                         <input type="file" name="updateBuild"/>
                                         <input type="submit" value="Remplacer le build"/> 
                                 </fieldset>

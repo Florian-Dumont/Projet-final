@@ -42,16 +42,18 @@ class Buildmanager{
     {
         $ddb = new Dbconnect();
         
-        $sql ="UPDATE image_url FROM builds Where build_id=:build_id";
+        $sql ="UPDATE builds SET image_URL=:image_url Where ID=:build_id";
         
         $query = $ddb->db->prepare($sql);
-        $query->bindvalue(":build_id", $buildId);
+        $query->bindvalue(":image_url", $image_url);
         $query->execute();
         
         $image = $query->fetch(PDO::FETCH_ASSOC);
         $imageUrl = $image['image_url'];
+        var_dump($imageUrl);
+        die;
         
-        return $imageurl;
+        // return $imageurl;
         
     }
 }      

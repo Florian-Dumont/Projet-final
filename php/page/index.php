@@ -32,6 +32,8 @@ if(!(isset($_GET["route"]) && $_GET["route"] === "connexion")){
     //Si une route a été définie dans l'url
     if(isset($_GET["route"]))
     {
+        var_dump($_GET['route']);
+        
         //on charge la page correspondante en envoyant toutes les infos en POST et GET
         $routing->matchRoute($_GET["route"], $_GET, $_POST);
     }
