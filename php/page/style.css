@@ -641,24 +641,25 @@ table {
 
   header {
     text-align: initial; }
+    header .admin-panel {
+      color: white; }
+    header .log-in {
+      color: white;
+      width: 40px;
+      text-decoration: none; }
+    header .log-out {
+      text-decoration: none;
+      color: white; }
+    header .under_logo {
+      font-size: 0.6em; }
+    header .sociaux {
+      margin-left: 2em; }
 
   .header_logo {
     max-width: 100%; }
 
   .nav_element p {
     display: none; }
-
-  .admin-panel {
-    color: white; }
-
-  .log-in {
-    color: white;
-    width: 40px;
-    text-decoration: none; }
-
-  .log-out {
-    text-decoration: none;
-    color: white; }
 
   .sociaux-timeline {
     align-items: center;
@@ -723,6 +724,23 @@ table {
     font-size: 0.8em; }
 
   .login-form {
-    width: 100%; } }
+    width: 100%; }
+
+  a.user_admin {
+    font-size: 0.8em; }
+
+  table {
+    font-size: 0.7em; }
+    table .deletebtn {
+      font-size: 0.7em;
+      background-color: red;
+      color: white; }
+
+  #description {
+    width: 80%; }
+
+  .update_admin {
+    font-size: 0.8em; } }
+/* fin media query 320-480px*/
 
 /*# sourceMappingURL=style.css.map */
