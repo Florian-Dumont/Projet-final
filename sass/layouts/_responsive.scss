@@ -52,13 +52,17 @@ header{
                 
         }
         .gensh-event{
+                position:relative;
+                top:-3em;
                 margin: 0;
+                
         }
 }
 .hidden_degeu{
         right:1.5em;
         position:relative;
         top:-3em;
+        width:100vw;
         max-width:100vw;
         }
 .build_disclaimer{

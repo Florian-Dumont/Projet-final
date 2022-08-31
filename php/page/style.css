@@ -107,9 +107,9 @@ span.css-lgbo0i {
 
 .hidden_degeu {
   height: 50px;
-  width: 1550px;
+  width: 1800px;
   position: relative;
-  right: 250%;
+  right: 280%;
   top: -3em;
   background-image: url("../../ressources/No_elem_template.png"); }
 
@@ -650,12 +650,15 @@ table {
         font-size: 1em;
         width: 50%; }
     .sociaux-timeline .gensh-event {
+      position: relative;
+      top: -3em;
       margin: 0; }
 
   .hidden_degeu {
     right: 1.5em;
     position: relative;
     top: -3em;
+    width: 100vw;
     max-width: 100vw; }
 
   .build_disclaimer {
