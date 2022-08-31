@@ -127,5 +127,29 @@ table{
         font-size:0.8em;
 }
 
+/**** cards **/
+.options-wrapper{
+        display:block;
+        width:100%;
+        
+}
+.options{
+      display:block;
+      flex-direction:column;
+      height:auto;
+      max-width:auto;
+      min-width:auto;
+      align-items:center;
+      
+}
+body .options .option .active{
+        margin-top:1em;
+        width:auto;
+}
+.options .option .face {
+        position:relative;
+       left:4em;
+}
+
 
 }/* fin media query 320-480px*/

@@ -342,37 +342,11 @@ span.css-lgbo0i {
   position: relative;
   right: 20px; }
 
-@media screen and (max-width: 718px) {
-  body .options {
-    min-width: 520px; }
-
-  body .options .option:nth-child(5) {
-    display: none; } }
-@media screen and (max-width: 638px) {
-  body .options {
-    min-width: 440px; }
-
-  body .options .option:nth-child(4) {
-    display: none; } }
-@media screen and (max-width: 558px) {
-  body .options {
-    min-width: 360px; }
-
-  body .options .option:nth-child(3) {
-    display: none; } }
-@media screen and (max-width: 478px) {
-  body .options {
-    min-width: 280px; }
-
-  body .options .option:nth-child(2) {
-    display: none; } }
 body .options .option {
   position: relative;
   overflow: hidden;
   min-width: 10px;
   margin: 10px;
-  background-size: auto 100%;
-  background-position: center;
   cursor: pointer;
   transition: 1.8s cubic-bezier(0.05, 0.61, 0.41, 0.95); }
 
@@ -382,8 +356,7 @@ body .options .option.active {
   width: 1200px;
   max-width: 1200px;
   margin: 0px;
-  border-radius: 40px;
-  background-size: auto 100%; }
+  border-radius: 40px; }
   body .options .option.active:active {
     transform: scale(1); }
 
@@ -740,7 +713,28 @@ table {
     width: 80%; }
 
   .update_admin {
-    font-size: 0.8em; } }
+    font-size: 0.8em; }
+
+  /**** cards **/
+  .options-wrapper {
+    display: block;
+    width: 100%; }
+
+  .options {
+    display: block;
+    flex-direction: column;
+    height: auto;
+    max-width: auto;
+    min-width: auto;
+    align-items: center; }
+
+  body .options .option .active {
+    margin-top: 1em;
+    width: auto; }
+
+  .options .option .face {
+    position: relative;
+    left: 4em; } }
 /* fin media query 320-480px*/
 
 /*# sourceMappingURL=style.css.map */
