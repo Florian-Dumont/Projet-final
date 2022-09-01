@@ -62,7 +62,7 @@ header {
         align-items: center;
         text-align: center;
         margin-right: 20px;
-        font-size: 1.5em;
+        font-size: 1.3em;
         margin-left: auto;
         width: fit-content;
         height: fit-content;
@@ -72,6 +72,10 @@ header {
         padding:10px;
         color:white;
     }
+        .under_logo .sociaux a:hover{
+            color:teal;
+        }
+
 
 
     h1{ /*titre*/
@@ -84,13 +88,13 @@ header {
     justify-content:space-around;
     display:flex;
     width:auto;
-    margin-top : 40px;
-    padding-left:30px;
+    margin-top :2em;
+    padding-left:1em;
 }
 /** bloc map interactive*/
 .interactive-map{
     height: 550px;
-    width: 350px;
+    width: 300px;
     background-image: url("../../ressources/genshin-impact-carte-interactive-mihoyo.png");
     background-size: cover;
     background-position: 40% 50%;
@@ -108,20 +112,16 @@ header {
 }
 /** block feed instagram **/
 .insta-timeline{
-    width:350px;
+    width:300px;
     height:350px;
     position:relative;
     margin-left:40px;
     margin-top:-20px;
     
 }
-span.css-lgbo0i{
-    display:inherit;
-    display:none; 
-    background-color: red;
-    
-}
+
 .hidden_degeu{
+    /* hidden le temp de trouver une solution &|| un widget sans branding*/
     height:50px;
     width:1800px;
     position:relative;

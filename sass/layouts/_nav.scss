@@ -39,6 +39,10 @@
         height:50px;
         margin:0;
     }
+    a:hover img {
+        transition: all 2s ease-out;
+        transform: rotateY(360deg);
+    }
 }
 .nav_cryo{
     height:50px;    
@@ -69,6 +73,10 @@
         height:50px;
         margin:0;
     }
+    a:hover img {
+        transition: all 1s ease-out;
+        transform: translate(20px);
+    }
 }
 .nav_electro{
     height:50px;    
@@ -88,6 +96,11 @@
         color:white;
         position:relative;        
         gap:30px;
+    }
+    a:hover img {
+        transition: all 1s ease-out;
+        transform: rotate(0.5turn);
+        
     }
     img{
         width: 50px;
@@ -128,6 +141,9 @@
         position:relative;
         height:50px;
         margin:0;
+    }
+    a:hover img{
+        transform: translate(4em);    
     }
 }
 .nav_hydro{
@@ -188,5 +204,9 @@
         position:relative;
         height:50px;
         margin:0;
+    }
+    a:hover img {
+        transition: all 1s ease-out;
+        transform: scale(1.5, 1.5);
     }
 }
