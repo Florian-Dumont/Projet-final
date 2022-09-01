@@ -742,7 +742,7 @@ table {
     position: relative;
     left: 4em; } }
 /* fin media query 320-480px*/
-@media only screen and (min-width: 321px) {
+@media only screen and (min-width: 481px) and (max-width: 1080px) {
   /*orientation paysage pour mobile */
   body {
     width: 100%; }
@@ -775,26 +775,39 @@ table {
     max-width: 100%; }
 
   .nav_element p {
-    font-size: 0.6em; }
+    position: relative;
+    top: 0.7em;
+    right: 1.3em;
+    font-size: 0.5em; }
 
   .sociaux-timeline {
     align-items: center;
-    display: block;
-    justify-content: initial;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
     margin: 20px;
     padding: 0; }
     .sociaux-timeline .twitter-timeline {
-      width: 80%; }
+      width: 50%; }
     .sociaux-timeline .interactive-map {
-      width: 100%;
-      margin: 0;
-      margin-top: 20px; }
+      margin-left: 2em;
+      position: relative;
+      width: 50vw;
+      background-size: cover;
+      margin: 0; }
       .sociaux-timeline .interactive-map .map-sign {
-        font-size: 1em;
+        font-size: 1.5em;
         width: 50%; }
+    .sociaux-timeline .insta-timeline {
+      width: 47%;
+      margin: 0;
+      position: relative;
+      bottom: 6em;
+      border-radius: 20px; }
     .sociaux-timeline .gensh-event {
       position: relative;
-      top: -3em;
+      top: 1.5em;
+      width: 52.5%;
       margin: 0; }
 
   .hidden_degeu {
@@ -807,51 +820,66 @@ table {
   .build_disclaimer {
     position: relative;
     left: 0;
-    font-size: 0.8em;
-    width: 380px; }
+    font-size: 1.5em;
+    width: 780px; }
 
   .build_layout {
     position: initial;
-    width: 380px;
-    height: 380px; }
+    width: 770px;
+    height: 750px; }
 
   .comment_unlog {
     position: relative;
-    left: -5%;
-    font-size: 0.8em; }
+    left: 0%;
+    font-size: 1em; }
 
   .comments_zone {
     position: initial;
-    font-size: 0.8em; }
+    font-size: 1em; }
 
   .comments-title {
     position: initial;
-    font-size: 0.8em;
-    max-width: 400px; }
+    font-size: 1.2em;
+    max-width: 780px; }
 
   .comments {
-    width: 360px;
-    max-width: 400px;
+    width: 680px;
+    max-width: 680px;
     position: initial; }
     .comments #comments_box {
-      width: 350px; }
+      width: 740px; }
     .comments .submit {
       font-size: 0.8em; }
 
   .log-form {
     width: 90%;
-    font-size: 0.8em; }
+    font-size: 0.8em;
+    text-align: center;
+    align-items: center; }
 
   .login-form {
-    width: 100%; }
+    width: 100%;
+    text-align: center; }
+
+  button {
+    position: relative;
+    left: 1em;
+    top: 1em; }
+
+  .form_name {
+    position: relative;
+    left: 1em; }
 
   a.user_admin {
     font-size: 0.8em; }
 
   table {
-    font-size: 0.7em; }
+    font-size: 1em; }
     table .deletebtn {
-      font-size: 0.7em;
+      position: relative;
+      top: 0;
+      left: -0.5em;
+      font-size: 0.8em;
       background-color: red;
       color: white; }
 
@@ -867,10 +895,12 @@ table {
     width: 100%; }
 
   .options {
+    position: relative;
+    left: 2em;
     display: block;
-    flex-direction: column;
+    flex-wrap: wrap;
     height: auto;
-    max-width: auto;
+    max-width: 90%;
     min-width: auto;
     align-items: center; }
 
@@ -880,6 +910,6 @@ table {
 
   .options .option .face {
     position: relative;
-    left: 4em; } }
+    left: 15em; } }
 
 /*# sourceMappingURL=style.css.map */
