@@ -1,21 +1,25 @@
 <!doctype html>
 <html lang="fr">
 <?php
+
+
 require "../src/managers/Buildmanager.php";
 $buildManager = new BuildManager();
 $build=$buildManager->getAllBuilds();
 
+if(isset($_POST) && !empty($_POST)){
+         $buildManager->editBuildByBuildId($_POST['build'], $_FILES['updateBuild']['name']);
+}
 
 
 
 
-var_dump($_POST);
 ?>
 <head>
                 
 </head>
         <body>
-                <form class="admin-form" action="index.php?route=adminUpdate" method="post" enctype="multipart/form-data">
+                <form class="admin-form" action="" method="post" enctype="multipart/form-data">
                         <fieldset>
                                 <select name="build" id="build">
                                                 
@@ -47,9 +51,7 @@ $charactername = $build[$i]['image_URL'];
 
 <?php
 
-// if(isset($_POST)){
-//         $editbuild = $buildManager->editBuildByBuildId($_POST['image_URL']);
-// }
+
 
 
 ?>

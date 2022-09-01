@@ -54,7 +54,7 @@ header {
     align-items: center;
     text-align: center;
     margin-right: 20px;
-    font-size: 1.5rem;
+    font-size: 1.5em;
     margin-left: auto;
     width: fit-content;
     height: fit-content; }
@@ -624,9 +624,12 @@ table {
       text-decoration: none;
       color: white; }
     header .under_logo {
-      font-size: 0.6em; }
+      font-size: 0.5em; }
+    header .blanck {
+      /*div inv*/
+      max-width: 44%; }
     header .sociaux {
-      margin-left: 2em; }
+      font-size: 0.5em; }
 
   .header_logo {
     max-width: 100%; }
