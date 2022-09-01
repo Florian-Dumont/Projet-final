@@ -10,10 +10,6 @@ $build=$buildManager->getAllBuilds();
 if(isset($_POST) && !empty($_POST)){
          $buildManager->editBuildByBuildId($_POST['build'], $_FILES['updateBuild']['name']);
 }
-
-
-
-
 ?>
 <head>
                 
@@ -22,15 +18,11 @@ if(isset($_POST) && !empty($_POST)){
                 <form class="admin-form" action="" method="post" enctype="multipart/form-data">
                         <fieldset>
                                 <select name="build" id="build">
-                                                
-                                                
 <?php                                                
 for($i=0,$max=count($build);$i<$max;$i++){
 $characterId = $build[$i]['ID'];
 $charactername = $build[$i]['image_URL'];
-?>       
-                                                
-                                               
+?>     
                                         <option value = <?=$characterId?>>
                                         <?=$charactername?> </option>
 <?php
