@@ -175,6 +175,10 @@
         height:50px;
         margin:0;
     }
+    a:hover img{
+        transition: all 1s ease-out;
+        transform: rotate(-0.5turn);
+    }
 }
 .nav_pyro{
     height:50px;    

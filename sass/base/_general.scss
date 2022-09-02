@@ -4,6 +4,7 @@
 body {
     background-image: url("../../ressources/No_elem_template.png");
     background-size: cover;
+    
     height: 100vh;
     font-family: "Roboto", sans-serif;
     transition: 0.25s;
@@ -19,8 +20,9 @@ header {
     text-align: center;
     align-items: center;
     display: block;
-    background-image: url("../../ressources/No_elem_template.png");
+    // background-image: url("../../ressources/No_elem_template.png");
     background-size: cover;
+    
     .admin-panel{
         position:relative;
         left:42%;
@@ -123,9 +125,9 @@ header {
 .hidden_degeu{
     /* hidden le temp de trouver une solution &|| un widget sans branding*/
     height:50px;
-    width:1800px;
+    width:1300px;
     position:relative;
-    right:280%;
+    right:230%;
     top:-3em;
     background-image:url('../../ressources/No_elem_template.png');
     

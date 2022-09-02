@@ -12,7 +12,6 @@ header {
   text-align: center;
   align-items: center;
   display: block;
-  background-image: url("../../ressources/No_elem_template.png");
   background-size: cover; }
   header .admin-panel {
     position: relative;
@@ -101,9 +100,9 @@ header {
 .hidden_degeu {
   /* hidden le temp de trouver une solution &|| un widget sans branding*/
   height: 50px;
-  width: 1800px;
+  width: 1300px;
   position: relative;
-  right: 280%;
+  right: 230%;
   top: -3em;
   background-image: url("../../ressources/No_elem_template.png"); }
 
@@ -292,6 +291,9 @@ header {
     position: relative;
     height: 50px;
     margin: 0; }
+  .nav_hydro a:hover img {
+    transition: all 1s ease-out;
+    transform: rotate(-0.5turn); }
 
 .nav_pyro {
   height: 50px;
@@ -667,7 +669,7 @@ table {
       margin: 0; }
 
   .hidden_degeu {
-    right: 1.5em;
+    right: 1.2em;
     position: relative;
     top: -3em;
     width: 100vw;
