@@ -2,31 +2,22 @@
 <html lang="fr">
 
 
- 
+  <div class="drop_down"><i class="fa-solid fa-caret-down"></i></div>
 <div class="chatbox">
 <?php
 for($i=0,$max=count($messages);$i<$max;$i++){
     $date=date("d/m/Y",strtotime($messages[$i]["submited_date"]));
     $time=date("G:i:s",strtotime($messages[$i]["submited_date"]));
     $username = $commentManager->getNameByUserId($messages[$i]['user_ID']);
-    
 ?>    
+   
+
     <article class="comments_zone">   
             <u><p class="author"><?=$username['name']?></u></p>
             <p class="comments_time">a écrit le <?=$date?> à <?=$time?> </p>
             <p class="msger"><?=$messages[$i]["text"]?></p>
             
-            <?php
-        
-        //verification si l'utilisateur est connecté et si il a le role d'admin , si oui au deux =>on affiche le bouton delete
-        
-        // if(isset($_SESSION['user']))
-        // {
-        //     echo "<a class='admin_delete' href='index.php?route=admin'>Modifier</a>";    
-        // }else{
-            
-        // }
-        ?>
+         
             
             
     </article>

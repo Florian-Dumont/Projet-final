@@ -24,6 +24,15 @@ window.addEventListener("DOMContentLoaded", (event) => {
 // console.log(element);
 
 
+function change() {
+  const elements = document.querySelectorAll(".fa-caret-down");
+  let drop = document.querySelectorAll(".chatbox");
+  for (let element of elements) {
+    element.classList.toggle("transformed-state");
+    drop.classList.toggle("transformed-hidden");
+  }
+}
+let changeDrop = document.querySelector(".fa-caret-down")
+const changeButton = document.querySelector(".fa-caret-down");
+changeButton.addEventListener("click", change);
 
-
-// // css-6kluu6

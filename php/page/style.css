@@ -495,7 +495,7 @@ body .options .option .label .info .sub {
   margin: 1em;
   position: relative;
   width: auto;
-  left: 14%;
+  left: 16%;
   padding-left: 1em; }
   .comments_zone u {
     font-size: 1.2em; }
@@ -523,6 +523,24 @@ body .options .option .label .info .sub {
   position: relative;
   left: 75%;
   bottom: 6em; }
+
+.drop_down {
+  position: relative;
+  left: 9em;
+  width: auto;
+  margin-top: 1em;
+  background-color: white;
+  align-items: center;
+  text-align: end; }
+  .drop_down .fa-caret-down {
+    color: black;
+    margin-right: 1em;
+    cursor: pointer; }
+  .drop_down .transformed-state {
+    transform: rotate(0.5turn); }
+
+.transformed-hidden {
+  display: none; }
 
 /****** FORM**********/
 .admin-form {

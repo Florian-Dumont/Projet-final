@@ -35,8 +35,9 @@
         margin:1em;
         position:relative;
         width:auto;
-        left:14%;
+        left:16%;
         padding-left:1em;
+        
         u{
           font-size:1.2em;      
         }
@@ -67,3 +68,39 @@
         left:75%;
         bottom:6em;
 }
+.drop_down{
+        position:relative;
+        left:9em;
+        width:auto;
+        margin-top:1em;
+        background-color: white;
+        align-items:center;
+        text-align:end;
+        .fa-caret-down{
+                color:black;
+                margin-right:1em;
+                cursor:pointer;
+        }
+        .fa-caret-down:active{
+                // transform:rotate(0.5turn);
+        }
+        .transformed-state{
+                transform:rotate(0.5turn);
+        }
+        
+}
+.transformed-hidden{
+        display:none;
+}
+// @keyframes dropdown {
+//         from{
+//                 height:100%;
+//         }
+//         to{
+//                 height:0%;
+//                 // display:none;
+//         }
+// }
+
+
+        
