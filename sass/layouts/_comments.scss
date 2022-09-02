@@ -34,6 +34,7 @@
         border: 1px solid white;
         margin:1em;
         position:relative;
+        height:auto;
         width:auto;
         left:16%;
         padding-left:1em;
@@ -76,13 +77,11 @@
         background-color: white;
         align-items:center;
         text-align:end;
+        
         .fa-caret-down{
                 color:black;
                 margin-right:1em;
                 cursor:pointer;
-        }
-        .fa-caret-down:active{
-                // transform:rotate(0.5turn);
         }
         .transformed-state{
                 transform:rotate(0.5turn);
@@ -90,17 +89,27 @@
         
 }
 .transformed-hidden{
-        display:none;
+         
+        // animation: 2s slidein;
+        // animation-name: dropdown;
+        
+        
+        // display:none;
 }
-// @keyframes dropdown {
-//         from{
-//                 height:100%;
-//         }
-//         to{
-//                 height:0%;
-//                 // display:none;
-//         }
-// }
+@keyframes dropdown {
+        from{
+                opacity:100%;
+                line-height:100%;
+                font-size:100%;
+        }
+        to{
+                opacity:0%;
+                line-height:0;
+                font-size:0;
+                
+                
+        }
+}
 
 
         

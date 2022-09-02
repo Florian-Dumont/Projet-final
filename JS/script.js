@@ -25,14 +25,16 @@ window.addEventListener("DOMContentLoaded", (event) => {
 
 
 function change() {
+let drop = document.querySelector(".chatbox");
   const elements = document.querySelectorAll(".fa-caret-down");
-  let drop = document.querySelectorAll(".chatbox");
   for (let element of elements) {
     element.classList.toggle("transformed-state");
-    drop.classList.toggle("transformed-hidden");
+    drop.classList.toggle("transformed-hidden")
+   //  drop.classList.remove("transformed-hidden")
+   console.log(drop)
   }
 }
-let changeDrop = document.querySelector(".fa-caret-down")
+
 const changeButton = document.querySelector(".fa-caret-down");
 changeButton.addEventListener("click", change);
 
