@@ -165,6 +165,13 @@ body .options .option .active{
         position:relative;
        left:4em;
 }
+.drop_down{
+        position:initial;
+        margin-left:1em;
+        width:90vw;
+        height:1em;
+        font-size:0.8em;
+}
 
 
 }/* fin media query 320-480px*/
@@ -319,7 +326,7 @@ header{
 button{
         position:relative;
         left:1em;
-        top:1em;
+        
 }
 .form_name{
         position:relative;
@@ -371,6 +378,12 @@ body .options .option .active{
 .options .option .face {
         position:relative;
        left:15em;
+}
+.drop_down{
+        position:initial;
+        margin-left:1em;
+        width:96vw;
+        height:1.5em;
 }
 }/* fin  pour tablette */
 

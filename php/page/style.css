@@ -500,7 +500,11 @@ body .options .option .label .info .sub {
   position: relative;
   width: auto;
   left: 16%;
-  padding-left: 1em; }
+  padding-left: 1em;
+  opacity: 100%;
+  animation: 2s slidein;
+  animation-name: dropup;
+  animation-fill-mode: forward; }
   .comments_zone u {
     font-size: 1.2em; }
   .comments_zone .comments_time {
@@ -532,12 +536,14 @@ body .options .option .label .info .sub {
   position: relative;
   left: 9em;
   width: auto;
+  height: 2em;
   margin-top: 1em;
   background-color: white;
   align-items: center;
   text-align: end; }
   .drop_down .fa-caret-down {
     color: black;
+    margin-left: 3em;
     margin-right: 1em;
     cursor: pointer; }
   .drop_down .transformed-state {
@@ -548,13 +554,33 @@ body .options .option .label .info .sub {
   animation-name: dropdown;
   animation-fill-mode: forwards; }
 
+.transformed-toggle {
+  animation: 1s slidein;
+  animation-name: dropup;
+  animation-fill-mode: forward; }
+
 @keyframes dropdown {
   0% {
+    position: relative;
     opacity: 100%;
-    z-index: -2; }
+    z-index: -2;
+    top: 0%; }
   100% {
+    position: relative;
+    top: -100%;
     opacity: 0%;
     z-index: -100; } }
+@keyframes dropup {
+  0% {
+    position: relative;
+    top: -100%;
+    opacity: 0%;
+    z-index: -100; }
+  100% {
+    position: relative;
+    top: 0%;
+    opacity: 100%;
+    z-index: 1; } }
 /****** FORM**********/
 .admin-form {
   font-size: 1.2em;
@@ -782,7 +808,14 @@ table {
 
   .options .option .face {
     position: relative;
-    left: 4em; } }
+    left: 4em; }
+
+  .drop_down {
+    position: initial;
+    margin-left: 1em;
+    width: 90vw;
+    height: 1em;
+    font-size: 0.8em; } }
 /* fin media query 320-480px*/
 @media only screen and (min-width: 481px) and (max-width: 1280px) {
   /*POUR TABLETTE */
@@ -905,8 +938,7 @@ table {
 
   button {
     position: relative;
-    left: 1em;
-    top: 1em; }
+    left: 1em; }
 
   .form_name {
     position: relative;
@@ -952,7 +984,13 @@ table {
 
   .options .option .face {
     position: relative;
-    left: 15em; } }
+    left: 15em; }
+
+  .drop_down {
+    position: initial;
+    margin-left: 1em;
+    width: 96vw;
+    height: 1.5em; } }
 /* fin  pour tablette */
 /* pour ordi portable */
 @media (min-width: 1281px) and (max-width: 1365px) {

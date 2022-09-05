@@ -2,8 +2,8 @@
 <html lang="fr">
 
 
-  <div class="drop_down"><i class="fa-solid fa-caret-down"></i></div>
-<div class="chatbox">
+  <div class="drop_down ">Cacher/Afficher les commentaires<i class="fa-solid fa-caret-down "></i></div>
+<div class="chatbox transformed-toggle">
 <?php
 for($i=0,$max=count($messages);$i<$max;$i++){
     $date=date("d/m/Y",strtotime($messages[$i]["submited_date"]));

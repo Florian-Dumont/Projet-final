@@ -49,4 +49,5 @@ if(!(isset($_GET["route"]) && $_GET["route"] === "connexion")){
     <script type="text/javascript" src="../../JS/script.js"></script> 
     <link rel="stylesheet" href="./style.css">
     </body>
+    
 </html>

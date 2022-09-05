@@ -30,7 +30,7 @@ let drop = document.querySelector(".chatbox");
   for (let element of elements) {
     element.classList.toggle("transformed-state");
     drop.classList.toggle("transformed-hidden")
-   //  drop.classList.remove("transformed-hidden")
+    drop.classList.toggle("transformed-toggle")
    console.log(drop)
    console.log(change)
    
