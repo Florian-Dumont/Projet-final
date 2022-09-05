@@ -469,6 +469,7 @@ body .options .option .label .info .sub {
   text-shadow: 1px 1px black;
   position: relative;
   left: 15%;
+  overflow: hidden;
   bottom: 1%;
   color: white;
   text-align: center;
@@ -490,11 +491,13 @@ body .options .option .label .info .sub {
 
 /*****************************commentaire deja ecrit************************/
 .comments_zone {
+  display: flex;
+  flex-direction: column;
   color: white;
   border: 1px solid white;
   margin: 1em;
+  overflow: hidden;
   position: relative;
-  height: auto;
   width: auto;
   left: 16%;
   padding-left: 1em; }
@@ -540,15 +543,18 @@ body .options .option .label .info .sub {
   .drop_down .transformed-state {
     transform: rotate(0.5turn); }
 
+.transformed-hidden {
+  animation: 1s slidein;
+  animation-name: dropdown;
+  animation-fill-mode: forwards; }
+
 @keyframes dropdown {
-  from {
+  0% {
     opacity: 100%;
-    line-height: 100%;
-    font-size: 100%; }
-  to {
+    z-index: -2; }
+  100% {
     opacity: 0%;
-    line-height: 0;
-    font-size: 0; } }
+    z-index: -100; } }
 /****** FORM**********/
 .admin-form {
   font-size: 1.2em;

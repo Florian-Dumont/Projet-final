@@ -1,4 +1,4 @@
-"use strict"
+
 
 $(".option").hover(function(){
    $(".option").removeClass("active");
@@ -32,6 +32,8 @@ let drop = document.querySelector(".chatbox");
     drop.classList.toggle("transformed-hidden")
    //  drop.classList.remove("transformed-hidden")
    console.log(drop)
+   console.log(change)
+   
   }
 }
 

@@ -4,6 +4,7 @@
        text-shadow:1px 1px black;
         position:relative;
         left:15%;
+        overflow:hidden;
         bottom:1%;
         color:white;
         text-align:center;
@@ -30,14 +31,19 @@
 
 /*****************************commentaire deja ecrit************************/
 .comments_zone{
+        display:flex;
+        flex-direction:column;
         color:white;
         border: 1px solid white;
         margin:1em;
+        overflow:hidden;
         position:relative;
-        height:auto;
         width:auto;
         left:16%;
         padding-left:1em;
+        // animation: 2s slidein;
+        // animation-name: dropup;
+        // animation-fill-mode:reverse;
         
         u{
           font-size:1.2em;      
@@ -89,27 +95,37 @@
         
 }
 .transformed-hidden{
-         
-        // animation: 2s slidein;
-        // animation-name: dropdown;
+        animation: 1s slidein;
+        animation-name: dropdown;
+        animation-fill-mode:forwards;
         
         
-        // display:none;
+        
 }
 @keyframes dropdown {
-        from{
+        0%{
                 opacity:100%;
-                line-height:100%;
-                font-size:100%;
+                z-index:-2;
         }
-        to{
-                opacity:0%;
-                line-height:0;
-                font-size:0;
+        
+        100%{
                 
+                opacity:0%;
+                z-index:-100;
                 
         }
 }
-
+// @keyframes dropup{
+//         0%{
+//             position:relative;
+//                 top:-70%;
+//                 z-index:-100;
+                    
+//         }
+//         100%{
+//                 position:relative;
+//                 top:0%;
+//         }
+// }
 
         
