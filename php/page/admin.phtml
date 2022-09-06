@@ -36,7 +36,7 @@ if(isset($_POST["submit"]))
             <fieldset>
                 <h3>Crée un personage</h3>
                 <label for="charname">Nom du personnage</label>
-                <input type="text" name="charname" id="charname">
+                <input maxlength="255 type="text" name="charname" id="charname">
                 
             </fieldset>
             
@@ -76,7 +76,7 @@ if(isset($_POST["submit"]))
             </fieldset>
             
             <fieldset>
-                <textarea id="description" name="description"
+                <textarea maxlength="500" id="description" name="description"
                           rows="5" cols="50">Description du build
                 </textarea>            
             </fieldset>

@@ -48,8 +48,8 @@
         <div class="blanck"></div>
     <h1>Teyvat.fr</h1>
         <div class="sociaux">
-            <a href="https://www.instagram.com/teyvat.fr/" target="_blanck"><i class="fa-brands fa-instagram">Teyvat.fr</i></a> <!--link + icone insta-->
-            <a href="https://www.twitch.tv/saelwin" target="_blanck"><i class="fa-brands fa-twitch">Saelwin</i></a> <!--link + icone twitch-->
+            <a href="https://www.instagram.com/teyvat.fr/" target="_blank"><i class="fa-brands fa-instagram">Teyvat.fr</i></a> <!--link + icone insta-->
+            <a href="https://www.twitch.tv/saelwin" target="_blank"><i class="fa-brands fa-twitch">Saelwin</i></a> <!--link + icone twitch-->
         </div>
     </div>
 </header>
