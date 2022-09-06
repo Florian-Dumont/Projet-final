@@ -483,6 +483,8 @@ body .options .option .label .info .sub {
   position: relative;
   left: 14%; }
   .comments #comments_box {
+    display: flex;
+    flex-wrap: wrap;
     width: 900px;
     border-style: none;
     border-radius: 10px; }
@@ -511,6 +513,10 @@ body .options .option .label .info .sub {
     font-size: 0.8em;
     margin-top: -0.8em; }
   .comments_zone .msger {
+    max-width: 90%;
+    height: auto;
+    display: flex;
+    flex-wrap: wrap;
     padding-left: 1em;
     font-size: 1.1em; }
 

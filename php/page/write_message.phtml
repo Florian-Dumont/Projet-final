@@ -7,7 +7,7 @@
                 <input type="hidden" name="userId" value <?= $_SESSION['user']['id']?>> </input>
                 <input type="hidden" name="characterId" value=<?= $characterId?>> </input>  
             <fieldset>
-                <textarea id="comments_box" name="comments"
+                <textarea maxlength="255" id="comments_box" name="comments"
                           rows="3" cols="115" >
                 </textarea>
         

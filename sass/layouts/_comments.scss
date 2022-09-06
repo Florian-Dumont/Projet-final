@@ -20,6 +20,8 @@
         position:relative;
         left:14%;
         #comments_box{
+                display:flex;
+                flex-wrap:wrap;
                 width:900px;
                 border-style:none;
                 border-radius:10px;
@@ -56,6 +58,10 @@
                 margin-top:-0.8em;
         }
         .msger{
+                max-width:90%;
+                height:auto;
+                display:flex;
+                flex-wrap:wrap;
                 padding-left:1em;
                 font-size:1.1em;
         }
@@ -83,7 +89,6 @@
         left:9em;
         width:auto;
         height:2em;
-        
         margin-top:1em;
         background-color: white;
         align-items:center;

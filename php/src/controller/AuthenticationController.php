@@ -47,12 +47,19 @@ class AuthenticationController
     }
     function admin() : void
     {
-        if($_SESSION['user']['is_admin']==1){ 
-        require "../page/admin.phtml";
-        } 
+        if(isset($_SESSION['user']))
+        {
+          if($_SESSION['user']['is_admin']==1){ 
+          require "../page/admin.phtml";
+          } 
+          else{
+          echo "<h1 class='notfound'>Loupé , la page n'existe pas !</br> 
+              <img src='../../ressources/Ganyu404.png' alt=' émoticone de ganyu troublé'></h1>";
+          }
+        }
         else{
-        echo "<h1 class='notfound'>Loupé , la page n'existe pas !</br> 
-            <img src='../../ressources/Ganyu404.png' alt=' émoticone de ganyu troublé'></h1>";
+         echo "<h1 class='notfound'>Loupé , la page n'existe pas !</br> 
+              <img src='../../ressources/Ganyu404.png' alt=' émoticone de ganyu troublé'></h1>";
         }
     }
     function adminUpdate() : void
