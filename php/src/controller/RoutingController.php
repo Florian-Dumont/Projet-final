@@ -75,6 +75,10 @@ class RoutingController
             $authenticationController = new AuthenticationController();
             $authenticationController->adminUpdate($post);
         }
+        else if ($route === "updateBuild"){
+            $authenticationController = new AuthenticationController();
+            $authenticationController->adminUpdate($post);
+        }
         else
         {
             echo "<h1 class='notfound'>Loupé , la page n'existe pas !</br> 

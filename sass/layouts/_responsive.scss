@@ -326,7 +326,7 @@ header{
 button{
         position:relative;
         left:1em;
-        
+        top:1em
 }
 .form_name{
         position:relative;
@@ -392,7 +392,7 @@ body .options .option .active{
 @media (min-width: 1281px) and (max-width: 1365px){
     
     
-    header{
+header{
         text-align:center;
         .admin-panel{
         color:white;
@@ -597,7 +597,55 @@ body .options .option .active{
 }    
 }/* fin pour ordi portable */
 
+@media (min-width: 1367px){
 
+.build_disclaimer{
+        left:25%;
+}
+.build_layout{
+        position:relative;
+        left:15%;
+        width:970px;
+        height:950px;
+}
+
+.comment_unlog{
+        width:97%;
+        left:13%;
+        font-size:1em;
+}
+.comments_zone{
+        left:15%;
+       font-size:1em;
+}
+.comments-title{
+        left:6em;
+        font-size:1.5em;
+        width:100%;
+        max-width:100%
+}
+.comments{
+        width:95%;
+        left:8.9em;
+        height:auto;
+        
+        #comments_box{
+                width:940px;
+        }
+        .submit{
+                position:relative;
+                top:0;
+                font-size:1em;
+        }
+}
+.hidden_degeu{
+        width:99vw;
+        position:relative;
+        left:-65em;
+}
+
+
+}
 
 
 

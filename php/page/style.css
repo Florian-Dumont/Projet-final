@@ -8,7 +8,7 @@ body {
   transition: 0.25s; }
 
 header {
-  width: 100vw;
+  width: 95vw;
   text-align: center;
   align-items: center;
   display: block;
@@ -30,6 +30,7 @@ header {
     position: relative;
     left: 41%; }
   header .under_logo {
+    width: 100%;
     /*h1 + sociaux*/
     position: relative;
     text-align: center;
@@ -944,7 +945,8 @@ table {
 
   button {
     position: relative;
-    left: 1em; }
+    left: 1em;
+    top: 1em; }
 
   .form_name {
     position: relative;
@@ -1172,5 +1174,45 @@ table {
     position: relative;
     left: 40%; } }
 /* fin pour ordi portable */
+@media (min-width: 1367px) {
+  .build_disclaimer {
+    left: 25%; }
+
+  .build_layout {
+    position: relative;
+    left: 15%;
+    width: 970px;
+    height: 950px; }
+
+  .comment_unlog {
+    width: 97%;
+    left: 13%;
+    font-size: 1em; }
+
+  .comments_zone {
+    left: 15%;
+    font-size: 1em; }
+
+  .comments-title {
+    left: 6em;
+    font-size: 1.5em;
+    width: 100%;
+    max-width: 100%; }
+
+  .comments {
+    width: 95%;
+    left: 8.9em;
+    height: auto; }
+    .comments #comments_box {
+      width: 940px; }
+    .comments .submit {
+      position: relative;
+      top: 0;
+      font-size: 1em; }
+
+  .hidden_degeu {
+    width: 99vw;
+    position: relative;
+    left: -65em; } }
 
 /*# sourceMappingURL=style.css.map */

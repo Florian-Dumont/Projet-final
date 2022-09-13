@@ -15,7 +15,7 @@ body {
 
 
 header {
-    width:100vw;
+    width:95vw;
     text-align: center;
     align-items: center;
     display: block;
@@ -42,7 +42,8 @@ header {
         left:41%;
         
     }
-    .under_logo{                /*h1 + sociaux*/
+    .under_logo{
+        width:100%;/*h1 + sociaux*/
         position: relative;    
         text-align: center;
         align-items: center;

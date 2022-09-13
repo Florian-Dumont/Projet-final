@@ -23,47 +23,89 @@ if(!empty($_POST)){
                 $weaponicon = "../../ressources/sword.png";
         }
         
-        $sql1 = "INSERT INTO characters (name, portrait_url, category_id, weapon_name, weapon_icon) VALUE (:charname, :faceUpload, :element_type, :weapon_type, :weapon_icon)";
         
-        $query = $ddb->db->prepare($sql1);
-        $query->bindValue(':charname', $charname);
-        $query->bindValue(':faceUpload',$_FILES['faceUpload']['full_path']);
-        $query->bindValue(':element_type',intval($_POST['element-type']));
-        $query->bindValue(':weapon_type', $_POST['weapon-type']);
-        $query->bindValue(':weapon_icon',$weaponicon);
-        
-        $query->execute();
         
         $uploader = new FileUploader();
+        $size = $uploader->checkFileSize($_FILES["faceUpload"]["size"]);
         
-        $media = $uploader->upload($_FILES["faceUpload"]);
+        $tmpNameArray = explode(".", $_FILES["faceUpload"]["name"]);
+            $tmpExt = end($tmpNameArray);
+        $extention = $uploader->checkFileType($tmpExt);
         
-        $id = $ddb->db->lastInsertId();
+        $mime = $uploader->checkMime($_FILES["faceUpload"]["tmp_name"]);
         
-
+         $sizeSecondImg = $uploader->checkFileSize($_FILES["buildUpload"]["size"]);
         
-        $sql3 = "INSERT INTO builds (description, image_URL, character_id) VALUE (:description, :image_url, :character_id)";
+        $tmpNameArray = explode(".", $_FILES["buildUpload"]["name"]);
+            $tmpExt = end($tmpNameArray);
+        $extentionSecondImg = $uploader->checkFileType($tmpExt);
         
-        $query = $ddb->db->prepare($sql3);
-        $query->bindValue(':character_id',intval($id) );
-        $query->bindValue(':description', $description);
-        $query->bindValue(':image_url', $_FILES['buildUpload']['name']);
+        $mimeSecondImg = $uploader->checkMime($_FILES["buildUpload"]["tmp_name"]);
+       
+        
+        if($size === true && $extention === true && $mime === true && $sizeSecondImg === true && $extentionSecondImg === true && $mimeSecondImg === true){
+                
+                
+                // $uploader = new FileUploader();
+                $originalNameFirst = uniqid()."-".$_FILES["faceUpload"]["name"];
+                $originalNameSecond = uniqid()."-".$_FILES["buildUpload"]["name"];
+                
+                $media = $uploader->upload($_FILES["faceUpload"], $originalNameFirst);
+                
+                
+                $media = $uploader->upload($_FILES["buildUpload"], $originalNameSecond);
+                
+                $sql1 = "INSERT INTO characters (name, portrait_url, category_id, weapon_name, weapon_icon) VALUE (:charname, :faceUpload, :element_type, :weapon_type, :weapon_icon)";
+        
+                $query = $ddb->db->prepare($sql1);
+                $query->bindValue(':charname', $charname);
+                $query->bindValue(':faceUpload',$originalNameFirst);
+                $query->bindValue(':element_type',intval($_POST['element-type']));
+                $query->bindValue(':weapon_type', $_POST['weapon-type']);
+                $query->bindValue(':weapon_icon',$weaponicon);
+                
+                $query->execute();
+                
+                $id = $ddb->db->lastInsertId();
+        
+                $sql3 = "INSERT INTO builds (description, image_URL, character_id) VALUE (:description, :image_url, :character_id)";
+                        
+                $query = $ddb->db->prepare($sql3);
+                $query->bindValue(':character_id',intval($id) );
+                $query->bindValue(':description', $description);
+                $query->bindValue(':image_url', $originalNameSecond);
+                        
+                $query->execute();
+        }
+        else{
+                if($size === false){
+                        echo "le fichier de votre premiére image est trop volumineux";
+                }
+                if($extention === false){
+                        echo "l'extension de votre premier fichier ne correspond pas aux extensions attendues";
+                }
+                if($mime === false){
+                        echo "le premier fichier semble corrompu";
+                }
+                if($sizeSecondImg === false){
+                        echo "le fichier de votre deuxiéme image est trop volumineux";
+                }
+                if($extentionSecondImg === false){
+                        echo "l'extension de votre deuxiéme fichier ne correspond pas aux extensions attendues";
+                }
+                if($mimeSecondImg === false){
+                        echo "le deuxiéme fichier semble corrompu";
+                }
+        }
+        
+        //  var_dump($_FILES);
+        // var_dump($size);
+        // var_dump($extention);
+        // var_dump($mime);
+        // die;
         
         
        
-        
-        /*try{
-    //$pdo = new PDO("n'importe quoi !");
-} catch(Exception $e){
-    echo $e->getMessage();
-}*/
-        
-        
-        $query->execute();
-        
-        $uploader = new FileUploader();
-        
-        $media = $uploader->upload($_FILES["buildUpload"]);
 }
 
 
