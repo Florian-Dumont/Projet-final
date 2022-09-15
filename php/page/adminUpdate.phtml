@@ -23,8 +23,9 @@ for($i=0,$max=count($build);$i<$max;$i++){
 $characterId = $build[$i]['ID'];
 $charactername = $build[$i]['image_URL'];
 ?>     
-                                        <option value = <?=$characterId?>>
-                                        <?=$charactername?> </option>
+                                        <option value = <?=htmlspecialchars($characterId)?>>
+                                        <?=htmlspecialchars($charactername)?> </option>
+                                
 <?php
 }
 ?> 

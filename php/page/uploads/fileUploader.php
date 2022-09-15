@@ -9,27 +9,27 @@ require "media.php";
 
 const UPLOADS_DIR = '/uploads/';
 
-const MIME_TYPES = array(
+// const MIME_TYPES = array(
 
-    // images
-    'png' => 'image/png',
-    'jpe' => 'image/jpeg',
-    'jpeg' => 'image/jpeg',
-    'jpg' => 'image/jpeg',
-    'gif' => 'image/gif',
-    'bmp' => 'image/bmp',
-    'ico' => 'image/vnd.microsoft.icon',
-    'tiff' => 'image/tiff',
-    'tif' => 'image/tiff',
-    'svg' => 'image/svg+xml',
-    'svgz' => 'image/svg+xml',
+//     // images
+//     'png' => 'image/png',
+//     'jpe' => 'image/jpeg',
+//     'jpeg' => 'image/jpeg',
+//     'jpg' => 'image/jpeg',
+//     'gif' => 'image/gif',
+//     'bmp' => 'image/bmp',
+//     'ico' => 'image/vnd.microsoft.icon',
+//     'tiff' => 'image/tiff',
+//     'tif' => 'image/tiff',
+//     'svg' => 'image/svg+xml',
+//     'svgz' => 'image/svg+xml',
 
-    // audio/video
-    'mp3' => 'audio/mpeg',
-    'qt' => 'video/quicktime',
-    'mov' => 'video/quicktime',
+//     // audio/video
+//     'mp3' => 'audio/mpeg',
+//     'qt' => 'video/quicktime',
+//     'mov' => 'video/quicktime',
 
-);
+// );
 
 class FileUploader
 {

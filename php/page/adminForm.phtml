@@ -35,18 +35,21 @@ if(!empty($_POST)){
         $mime = $uploader->checkMime($_FILES["faceUpload"]["tmp_name"]);
         
          $sizeSecondImg = $uploader->checkFileSize($_FILES["buildUpload"]["size"]);
-        
+         
+        //separation du nom de fichier pour récup uniquement l'extention
         $tmpNameArray = explode(".", $_FILES["buildUpload"]["name"]);
             $tmpExt = end($tmpNameArray);
         $extentionSecondImg = $uploader->checkFileType($tmpExt);
         
         $mimeSecondImg = $uploader->checkMime($_FILES["buildUpload"]["tmp_name"]);
        
-        
+        //verification de toute les condition ( taile /extension / MIME) pour les deux fichier
         if($size === true && $extention === true && $mime === true && $sizeSecondImg === true && $extentionSecondImg === true && $mimeSecondImg === true){
                 
                 
                 // $uploader = new FileUploader();
+                
+                //mise en place d'une ID unique pour chaque fichier envoyé
                 $originalNameFirst = uniqid()."-".$_FILES["faceUpload"]["name"];
                 $originalNameSecond = uniqid()."-".$_FILES["buildUpload"]["name"];
                 
