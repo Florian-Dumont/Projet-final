@@ -2,7 +2,7 @@
 
 /**
  * File Uploader class used for media upload
- * @author Mari Doucet
+ * @author Mari Doucet & Florian Dumont
 */
 
 require "media.php";
@@ -125,6 +125,8 @@ class FileUploader
         // return new Media($originalName, $fileName, $fileType, $url);
         
     }
+    
+    //creation d'une fonction unlink ici?
 }  
 
    

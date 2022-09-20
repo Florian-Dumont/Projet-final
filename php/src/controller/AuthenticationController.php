@@ -87,6 +87,12 @@ class AuthenticationController
     {
         //récuperer l'image actuel das la DB par rapport a l'ID.
         // supprimer l'image dans le dossier uploads dont on a récup le nom avant.(unset)
+        
+        // $fichier = '/var/www/vhosts/domaine.com/www/fichier.pdf';
+        // if(file_exists($fichier))
+        // {unlink($fichier);}
+        
+        
         //telecharger l'image founi dans le formulaire
         //appeler un model qui va lancer la methode update dans la DB.
         //header location => index.php?route=adminUpdate.
@@ -94,3 +100,4 @@ class AuthenticationController
 
     
 }
+

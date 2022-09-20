@@ -31,8 +31,8 @@ let drop = document.querySelector(".chatbox");
     element.classList.toggle("transformed-state");
     drop.classList.toggle("transformed-hidden")
     drop.classList.toggle("transformed-toggle")
-   console.log(drop)
-   console.log(change)
+//    console.log(drop)
+//    console.log(change)
    
   }
 }
