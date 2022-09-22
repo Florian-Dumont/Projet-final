@@ -8,7 +8,44 @@ $buildManager = new BuildManager();
 $build=$buildManager->getAllBuilds();
 
 if(isset($_POST) && !empty($_POST)){
-         $buildManager->editBuildByBuildId($_POST['build'], $_FILES['updateBuild']['name']);
+        
+        
+         $uploader = new FileUploader();
+         // on verifie a nouveau la taille / l'extension / le mime de la futur nouvelle image
+        $size = $uploader->checkFileSize($_FILES["updateBuild"]["size"]);
+        
+        $tmpNameArray = explode(".", $_FILES["updateBuild"]["name"]);
+            $tmpExt = end($tmpNameArray);
+        $extention = $uploader->checkFileType($tmpExt);
+
+        
+        $mime = $uploader->checkMime($_FILES["updateBuild"]["tmp_name"]);
+        
+        if($size === true && $extention === true && $mime === true){
+                //si tout est bon , on supprime l'ancienne image du répertoire.
+                
+                unlink('uploads/' . $_POST["build"]);
+                //puis on attribut un id unique a la nouvelle image
+                $originalName = uniqid()."-".$_FILES["updateBuild"]["name"];
+                //on remplace le nom de l'image par le nouveau nom dans la DB
+                $buildManager->editBuildByBuild($_POST['build'], $originalName);
+                
+                //on upload la nouvelle image dans le dossier uploads
+                $uploader->upload($_FILES["updateBuild"], $originalName);
+                //on récupére l'id de la nouvelle image pour la redirection
+                $id = $buildManager->getIdOfBuildName($originalName);
+                $characterId = $id['ID'];
+                // var_dump($originalName);
+                // var_dump($id);
+                // die;
+                
+                //on redirige vers la nouvelle image
+                header ("location: index.php?route=build&characterId=$characterId");
+                exit();
+
+        }
+        
+        
 }
 ?>
 <head>
@@ -23,7 +60,7 @@ for($i=0,$max=count($build);$i<$max;$i++){
 $characterId = $build[$i]['ID'];
 $charactername = $build[$i]['image_URL'];
 ?>     
-                                        <option value = <?=htmlspecialchars($characterId)?>>
+                                        <option value = <?=htmlspecialchars($charactername)?>>
                                         <?=htmlspecialchars($charactername)?> </option>
                                 
 <?php

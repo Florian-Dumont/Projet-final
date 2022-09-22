@@ -35,30 +35,29 @@ class Buildmanager{
         return $builds;
     }
     
-    public function editBuildByBuildId(int $buildId, string $image_url) : void
+    public function editBuildByBuild(string $buildname, string $image_url) : void
     {
         $ddb = new Dbconnect();
         
-        $sql ="UPDATE builds SET image_URL=:image_url WHERE ID=:build_id";
+        $sql ="UPDATE builds SET image_URL=:image_url WHERE image_URL=:build_name";
         
         $query = $ddb->db->prepare($sql);
         $query->bindValue(":image_url", $image_url);
-        $query->bindValue(":build_id", $buildId);
+        $query->bindValue(":build_name", $buildname);
         $query->execute();
     }
         
-    public function getBuildByBuildId(int $buildId, string $image_url) : int
+    public function getIdOfBuildName(string $image_url)
     {
         $ddb = new Dbconnect();
         
-        $sql = "SELECT ID, image_URL FROM builds WHERE ID=:build_id";
+        $sql = "SELECT ID FROM builds WHERE image_URL=:image_name";
         
         $query = $ddb->db->prepare($sql);
-        $query->bindValue(":build_id", $buildId);
-        $query->bindValue(":image_url", $image_url);
+        $query->bindValue(":image_name", $image_url);
         $query->execute();
         
-        $build =$query->fetch(PDO::FETCH_ASSOC);
+        return $query->fetch(PDO::FETCH_ASSOC);
         
     }
         

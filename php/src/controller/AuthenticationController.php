@@ -85,12 +85,23 @@ class AuthenticationController
     }
     function updateBuild()  
     {
+        if($_SESSION['user']['is_admin']!=1){
+            echo "<h1 class='notfound'>Loupé , la page n'existe pas !</br> 
+            <img src='../../ressources/Ganyu404.png' alt=' émoticone de ganyu troublé'></h1>";
+        }
+        else{
+        
+        }
         //récuperer l'image actuel das la DB par rapport a l'ID.
         // supprimer l'image dans le dossier uploads dont on a récup le nom avant.(unset)
         
+        // unlink('uploads/' . $_POST["build"]);
+
         // $fichier = '/var/www/vhosts/domaine.com/www/fichier.pdf';
-        // if(file_exists($fichier))
-        // {unlink($fichier);}
+        // if(file_exists($fichier)){
+        // unlink($fichier);
+        // }else
+        // echo "le fichier que vous essayer de supprimer n'existe pas !"
         
         
         //telecharger l'image founi dans le formulaire
