@@ -58,7 +58,7 @@ class FileUploader
     
     public function checkFileType(string $fileType) : bool
     {
-        $allowedFileTypes = ["png", "PNG", "jpg", "JPG", "jpeg", "JPEG"];
+        $allowedFileTypes = ["png", "PNG", "jpg", "JPG", "jpeg", "JPEG", "WEBP", "webp"];
         if(!in_array($fileType, $allowedFileTypes)){
            return false;
         }
@@ -73,6 +73,7 @@ class FileUploader
         $mime_type = array(
     
             // images
+            'webp'=> 'image/webp',
             'png' => 'image/png',
             'jpe' => 'image/jpeg',
             'jpeg' => 'image/jpeg',
@@ -126,7 +127,7 @@ class FileUploader
         
     }
     
-    //creation d'une fonction unlink ici?
+    
 }  
 
    

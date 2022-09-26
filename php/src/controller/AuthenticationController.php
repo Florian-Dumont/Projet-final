@@ -6,7 +6,6 @@ class AuthenticationController
     // function homepage() : void qui devra faire afficher le template homepage.phtml
     function homepage() : void
     {
-        
         require '../page/homepage.phtml';
         
     }
@@ -83,15 +82,15 @@ class AuthenticationController
             <img src='../../ressources/Ganyu404.png' alt=' émoticone de ganyu troublé'></h1>";
         }
     }
-    function updateBuild()  
-    {
-        if($_SESSION['user']['is_admin']!=1){
-            echo "<h1 class='notfound'>Loupé , la page n'existe pas !</br> 
-            <img src='../../ressources/Ganyu404.png' alt=' émoticone de ganyu troublé'></h1>";
-        }
-        else{
+    // function updateBuild()  
+    // {
+    //     if($_SESSION['user']['is_admin']!=1){
+    //         echo "<h1 class='notfound'>Loupé , la page n'existe pas !</br> 
+    //         <img src='../../ressources/Ganyu404.png' alt=' émoticone de ganyu troublé'></h1>";
+    //     }
+    //     else{
         
-        }
+    //     }
         //récuperer l'image actuel das la DB par rapport a l'ID.
         // supprimer l'image dans le dossier uploads dont on a récup le nom avant.(unset)
         
@@ -107,7 +106,7 @@ class AuthenticationController
         //telecharger l'image founi dans le formulaire
         //appeler un model qui va lancer la methode update dans la DB.
         //header location => index.php?route=adminUpdate.
-    }    
+       
 
     
 }

@@ -22,21 +22,27 @@ window.addEventListener("DOMContentLoaded", (event) => {
 //    element.style.width = 0;
 
 // console.log(element);
-
-
-function change() {
+const changeButton = document.querySelector(".fa-caret-down");
+if(changeButton !=null){
+        
+        function change() {
 let drop = document.querySelector(".chatbox");
   const elements = document.querySelectorAll(".fa-caret-down");
   for (let element of elements) {
     element.classList.toggle("transformed-state");
-    drop.classList.toggle("transformed-hidden")
-    drop.classList.toggle("transformed-toggle")
+    drop.classList.toggle("transformed-hidden");
+    drop.classList.toggle("transformed-toggle");
 //    console.log(drop)
 //    console.log(change)
    
   }
 }
 
-const changeButton = document.querySelector(".fa-caret-down");
+
 changeButton.addEventListener("click", change);
+        
+        
+}        
+
+
 

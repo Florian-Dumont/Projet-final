@@ -75,14 +75,9 @@ class RoutingController
             $authenticationController = new AuthenticationController();
             $authenticationController->adminUpdate($post);
         }
-        else if ($route === "updateBuild"){
-            $authenticationController = new AuthenticationController();
-            $authenticationController->adminUpdate($post);
-        }
         else
         {
-            echo "<h1 class='notfound'>Loupé , la page n'existe pas !</br> 
-            <img src='../../ressources/Ganyu404.png' alt=' émoticone de ganyu troublé'></h1>";
+            require "404.phtml";
         }
         
     }
