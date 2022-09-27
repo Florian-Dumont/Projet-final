@@ -6,7 +6,10 @@
         
         // a enelever une fosi le routing fait
         // require "../classes/db_connect.php";
+        
+        
         $ddb = new Dbconnect();
+        $keys = new Usermanager();
         
                             
 
@@ -19,13 +22,14 @@
             ){
                 //formulaire complet , on récupére les données en les protégeant (XSS)
                 //on retire les balise de name + email + neutralisation des balise dans le password
-                $name = strip_tags($_POST["name"]);
-                $email = strip_tags($_POST["email"]);
+                $name = trim(strtoupper($_POST["name"]));
+                $email = str_replace('+','',strtolower($_POST["email"]));
                 $password = htmlspecialchars($_POST["password"]);
                 // on verif si l'email a le bon format
                 if(!filter_var($_POST["email"], FILTER_VALIDATE_EMAIL)){
                     die("l'adresse email n'a pas le bon format ");
                 }
+                
                 
                 // hash du MDP
                 
@@ -74,6 +78,9 @@
                         if(!password_verify($_POST["passwordconnexion"], $user["password"])){
                             die("L'utilisateur et/ou le mot de passe est incorrect");
                         }
+                        if(isset($_SESSION['key']) && $_SESSION['key'] != $_POST['key']){
+                        die (" Un probleme est survenue");
+                        }
                         //si l'utilisateur et le mdp sont corrects on va pouvoir connecté l'utilisateur
                         //on démarre la session PHP via session_start
                         // session_start();
@@ -84,7 +91,8 @@
                             "id" => $user["ID"],
                             "pseudo" => $user["name"],
                             "email" => $user["email"],
-                            "is_admin" => $user["is_admin"]
+                            "is_admin" => $user["is_admin"],
+                            "key" => $keys
                         ];
                         
                         

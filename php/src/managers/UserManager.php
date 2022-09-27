@@ -28,6 +28,14 @@ class Usermanager{
                 
                 
         }
+        public function displayFormAddCustomers()
+        {
+                $model = new ResultsManager();
+                $token = $model->genererChaineAleatoire(20);
+                $_SESSION['key'] = $token;
+                
+                $this->render('form', 'write_message'['key' => $token]);
+        }
         
 }
 ?>

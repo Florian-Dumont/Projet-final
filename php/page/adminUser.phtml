@@ -25,9 +25,9 @@ $userArray= $userManager->getUsers();
 for($i=0,$max=count($userArray);$i<$max;$i++){
 ?>
         <tr>
-            <td><?=$userArray[$i]['name']?></td>
-            <td><?=$userArray[$i]['email']?></td>
-            <td><?=$userArray[$i]['is_admin']?></td>
+            <td><?=htmlspecialchars($userArray[$i]['name'])?></td>
+            <td><?=htmlspecialchars($userArray[$i]['email'])?></td>
+            <td><?=htmlspecialchars($userArray[$i]['is_admin'])?></td>
             <td>
                 <form action="" method="post">
                 <input type="hidden" name="userId" value=<?=$userArray[$i]['ID']?>>
