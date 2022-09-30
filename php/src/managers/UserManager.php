@@ -34,7 +34,7 @@ class Usermanager{
                 $token = $model->genererChaineAleatoire(20);
                 $_SESSION['key'] = $token;
                 
-                $this->render('form', 'write_message'['key' => $token]);
+                $this->render('form', 'write_message', ['key' => $token]);
         }
         
 }
