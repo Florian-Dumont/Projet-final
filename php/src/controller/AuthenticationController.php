@@ -82,6 +82,14 @@ class AuthenticationController
             <img src='../../ressources/Ganyu404.png' alt=' émoticone de ganyu troublé'></h1>";
         }
     }
+    function deleteUser() : void
+    {
+        // require "../src/managers/UserManager.php";
+        $userManager= new UserManager();
+        $userManager->deleteUserById($_POST['userId']);
+        header("location: index.php?route=adminUser");
+        exit();
+    }
     // function updateBuild()  
     // {
     //     if($_SESSION['user']['is_admin']!=1){

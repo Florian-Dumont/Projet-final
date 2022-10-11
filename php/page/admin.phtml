@@ -34,29 +34,29 @@ if(isset($_POST["submit"]))
         
         <form class="admin-form" action="" method="post" enctype="multipart/form-data">
             <fieldset>
-                <h3>Crée un personage</h3>
+                <h3>Créer un personnage</h3>
                 <label for="charname">Nom du personnage</label>
                 <input maxlength="255" type="text" name="charname" id="charname">
                 
             </fieldset>
             
             <fieldset>
-                <label for="weapon-type">Choisie le type d'arme du personnage</label>
+                <label for="weapon-type">Choisir le type d'arme </label>
                 <select name="weapon-type" id="weapon-type">
-                    <option value="">--Choisie le type d'arme du personnage--</option>
+                    <option value="">--Choisir le type d'arme --</option>
                     <option value="Arc">1 - Arc</option>
                     <option value="Catalyst">2 - Catalyseur</option>
-                    <option value="Espadon">3 - Epée a deux mains</option>
+                    <option value="Espadon">3 - Epée à deux mains</option>
                     <option value="Lance">4 - Lance</option>
-                    <option value="Sword">5 - Epée a une main</option>
+                    <option value="Sword">5 - Epée à une main</option>
                 </select> 
             </fieldset>
             
             <fieldset>
-                <label for="element-type">Choisie le type d'élement du personnage</label>
+                <label for="element-type">Choisir le type d'élément </label>
                 <select name="element-type" id="element-type">
-                    <option value="">Choisie le type d'element du personnage</option>
-                    <option value="1">1 - Anemo</option>
+                    <option value="">Choisir le type d'élément </option>
+                    <option value="1">1 - Anémo</option>
                     <option value="2">2 - Cryo</option>
                     <option value="3">3 - Electro</option>
                     <option value="6">4 - Géo</option>
@@ -66,12 +66,12 @@ if(isset($_POST["submit"]))
             </fieldset>
             
             <fieldset>
-                <label for="faceUpload">Portrait du personnage</label>
+                <label for="faceUpload">Portrait</label>
               <input type="file" name="faceUpload" id="faceUpload">
             </fieldset>
             
             <fieldset>
-                <label for="buildUpload">Image du build du personnage</label>
+                <label for="buildUpload">Image du build </label>
                 <input type="file" name="buildUpload" id="buildUpload">
             </fieldset>
             
@@ -81,7 +81,7 @@ if(isset($_POST["submit"]))
                 </textarea>            
             </fieldset>
             
-            <input type="submit" value="Crée le personnage">
+            <input type="submit" value="Créer le personnage">
             
         </form>
               

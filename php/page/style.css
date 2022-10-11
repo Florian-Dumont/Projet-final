@@ -137,6 +137,14 @@ header {
   text-align: center;
   color: white; }
 
+.valide {
+  font-size: 2em;
+  color: green; }
+
+.error {
+  font-size: 2em;
+  color: red; }
+
 .nav_element {
   display: flex;
   width: 100%;
@@ -642,6 +650,12 @@ body .options .option .label .info .sub {
     right: 38%;
     margin: 10px 0 10px 0;
     font-size: 1.2em; }
+
+.fa-eye {
+  color: red; }
+
+.fa-eye-slash {
+  color: white; }
 
 /***************** tableau user *****************/
 a.user_admin {

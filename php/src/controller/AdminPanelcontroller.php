@@ -1,5 +1,5 @@
 <?php
-require "../src/managers/UserManager.php";
+// require "../src/managers/UserManager.php";
 
 
 class AdminPanelController
@@ -13,9 +13,9 @@ class AdminPanelController
                         echo "Admin connecté !";
                         // If the admin came from a form, it means that he wanted to delete a user
                         if(!empty($_POST)){
-                            $delUserId=$_POST['userId'];
-                            $userManager= new UserManager();
-                            $userManager->deleteUserById($delUserId);
+                            
+                            // $userManager= new UserManager();
+                            // $userManager->deleteUserById($_POST['userId']);
                         }
                         
                       

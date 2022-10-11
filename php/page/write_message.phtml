@@ -1,15 +1,22 @@
 <?php
 
+// etant donnée la présence des deux formulaire dans la meme page, cela crée un conflit qui m'nepeche d'utiliser mon usermanager pour faire appel a une methode pour generer mon token (class deja appelé etqui est réappelé une seconde fois)
+  // Je sort legerement du MVC en generant mon token et mon $_SESSION ici meme
+  $token = substr(str_shuffle(str_repeat($code='0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz', ceil(20/strlen($code)) )),1,20);
+  $_SESSION['key2'] = $token; 
+
 ?>
 
 <h2 class="comments-title">Espace commentaires</h2>
-        <form class="comments" method="POST" action=<?= 'index.php?route=build&characterId='.$characterId ?>>
-                <input type="hidden" name="userId" value <?= $_SESSION['user']['id']?>> </input>
-                <input type="hidden" name="characterId" value=<?= $characterId?>> </input>  
+        <form class="comments" method="POST" action=<?= 'index.php?route=build&characterId='.$_GET['characterId'] ?>>
+                
+               
+                
             <fieldset>
                 <textarea maxlength="255" id="comments_box" name="comments"
-                          rows="3" cols="115" >
-                </textarea>
+                          rows="3" cols="115" ></textarea>
+                <input type="hidden" name="token" value="<?=$token?>"/>          
+                          
         
                 <button class="submit">Envoyer</button>
             </fieldset>

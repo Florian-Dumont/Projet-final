@@ -5,7 +5,7 @@ require "../src/managers/Buildmanager.php";?>
 
     <body>
    <div class="build_disclaimer">
-           <p>Ceci n'est qu'une proposition de build, d'autres variantes existes </p>
+           <p>Ceci n'est qu'une proposition de build, d'autres variantes existent </p>
    </div>
    
        <div class="build_layout">
@@ -13,24 +13,25 @@ require "../src/managers/Buildmanager.php";?>
          <?php
 
 
-         $characterId = $_GET['characterId'];
+         
          $bm = new Buildmanager();
-         $build = $bm->getBuildByCharacterId($characterId);
+         $build = $bm->getBuildByCharacterId($_GET['characterId']);
          
         
         $buildUrl="./uploads/".$build;
         
         
          ?>      
-        <img class="build_layout" src=<?=$buildUrl?> alt="image détaillé du build">
+        <img class="build_layout" src="<?=$buildUrl?>" alt="image détaillé du build">
 <?php
         if(isset($_SESSION['user']))
         {
-        include "write_message.phtml";
         include "../src/controller/Display_message_controller.php";
+        include "write_message.phtml";
+        
         }else{
  ?>
-        <p class="comment_unlog">Connectez vous pour avoir accés au commentaires</p>
+        <p class="comment_unlog">Connectez-vous pour avoir accès aux commentaires</p>
 <?php
         }
         

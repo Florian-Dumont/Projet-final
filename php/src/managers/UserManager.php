@@ -1,5 +1,7 @@
 <?php
+
 require_once "../../php/classes/db_connect.php";
+
 class Usermanager{
         
         
@@ -28,13 +30,15 @@ class Usermanager{
                 
                 
         }
-        public function displayFormAddCustomers()
+        public function generateToken()
         {
+                require  "../src/managers/ResultsManager.php";
                 $model = new ResultsManager();
                 $token = $model->genererChaineAleatoire(20);
                 $_SESSION['key'] = $token;
                 
-                $this->render('form', 'write_message', ['key' => $token]);
+                return $token;
+                // $this->render('form', 'write_message', ['key' => $token]);
         }
         
 }

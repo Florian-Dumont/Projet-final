@@ -10,7 +10,7 @@
         
         
         $ddb = new Dbconnect();
-        $keys = new Usermanager();
+        // $keys = new Usermanager();
         
                             
 
@@ -30,6 +30,9 @@
                 if(!filter_var($_POST["email"], FILTER_VALIDATE_EMAIL)){
                     die("l'adresse email n'a pas le bon format ");
                 }
+                if(isset($_SESSION['key']) && $_SESSION['key'] != $_POST['token']){
+                        die (" Un probleme est survenue");
+                        }
                 
                 
                 // hash du MDP
@@ -79,7 +82,7 @@
                         if(!password_verify($_POST["passwordconnexion"], $user["password"])){
                             die("L'utilisateur et/ou le mot de passe est incorrect");
                         }
-                        if(isset($_SESSION['key']) && $_SESSION['key'] != $_POST['key']){
+                        if(isset($_SESSION['key']) && $_SESSION['key'] != $_POST['token']){
                         die (" Un probleme est survenue");
                         }
                         //si l'utilisateur et le mdp sont corrects on va pouvoir connecté l'utilisateur
@@ -93,7 +96,7 @@
                             "pseudo" => $user["name"],
                             "email" => $user["email"],
                             "is_admin" => $user["is_admin"],
-                            "key" => $keys
+                            
                         ];
                         
                         

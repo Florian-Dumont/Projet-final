@@ -6,8 +6,8 @@ class Commentmanager{
         {
                 $ddb =new Dbconnect();
                 
-                $sql = "SELECT comments.ID, comments.build_ID, comments.text, comments.user_ID, comments.submited_date FROM comments JOIN builds ON builds.id=comments.build_ID
-                WHERE builds.character_ID=:character_id";
+                $sql = "SELECT comments.ID, comments.build_ID, comments.text, comments.user_ID, comments.submited_date FROM comments INNER JOIN builds ON builds.id=comments.build_ID
+                WHERE builds.character_ID=:character_id ORDER BY comments.submited_date DESC";
                 $query = $ddb->db->prepare($sql);
                 $query->bindValue(":character_id", $characterId);
                 $query->execute();
@@ -44,10 +44,10 @@ class Commentmanager{
                 return $result;
         }
         
-        public function addNewMessage(string $text, int $userId, int $characterId){
+        public function addNewMessage(string $text, int $characterId){
         //préparation des données à insérer dans la table message
         
-        $author=$userId;
+        
         date_default_timezone_set('CET');
         $date_submitted = date('Y-m-d G:i:s');
         $buildIdArray = $this->getBuildIdByCharacterId($characterId);
@@ -60,7 +60,7 @@ class Commentmanager{
         $parameters = [
         'build_id' => $buildId,
         'text' => $text,
-        'author' => $author,
+        'author' => $_SESSION['user']['id'],
         'submited_date' => $date_submitted
         ];
         $query->execute($parameters);

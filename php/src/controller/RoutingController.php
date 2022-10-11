@@ -75,6 +75,10 @@ class RoutingController
             $authenticationController = new AuthenticationController();
             $authenticationController->adminUpdate($post);
         }
+        else if ($route === "deleteUser"){
+            $authenticationController = new AuthenticationController();
+            $authenticationController->deleteUser($post);
+        }
         else
         {
             require "404.phtml";
